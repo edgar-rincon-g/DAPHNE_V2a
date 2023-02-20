@@ -1,0 +1,199 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2.2 (lin64) Build 3118627 Tue Feb  9 05:13:49 MST 2021
+| Date         : Mon Feb 20 14:54:36 2023
+| Host         : Edgar-Rincon running 64-bit Ubuntu 21.04
+| Command      : report_methodology -file DAPHNE2_methodology_drc_routed.rpt -pb DAPHNE2_methodology_drc_routed.pb -rpx DAPHNE2_methodology_drc_routed.rpx
+| Design       : DAPHNE2
+| Device       : xc7a200tfbg676-3
+| Speed File   : -3
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 29
++-----------+----------+-------------------------------------------------------------------+------------+
+| Rule      | Severity | Description                                                       | Violations |
++-----------+----------+-------------------------------------------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert                                      | 4          |
+| PDRC-190  | Warning  | Suboptimally placed synchronized register chain                   | 8          |
+| TIMING-9  | Warning  | Unknown CDC Logic                                                 | 1          |
+| TIMING-18 | Warning  | Missing input or output delay                                     | 7          |
+| TIMING-47 | Warning  | False path or asynchronous clock group between synchronous clocks | 5          |
+| TIMING-56 | Warning  | Missing logically or physically excluded clock groups constraint  | 3          |
+| XDCV-2    | Advisory | Incomplete constraint coverage due to missing replicated objects. | 1          |
++-----------+----------+-------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell endpoint_inst/pdts_endpoint_inst/ep/rxphy/phase_rst_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) endpoint_inst/pdts_endpoint_inst/ep/clkgen/mmcm/RST. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell eth_int_inst/reset_mgr/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) eth_int_inst/data_manager_blk/TX_CTRL_ADDR_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/RST,
+eth_int_inst/data_manager_blk/TX_CTRL_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/RST,
+eth_int_inst/data_manager_blk/TX_CTRL_INFO_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_18_inst_bl.fifo_18_bl/RST
+eth_int_inst/data_manager_blk/TX_CTRL_MAC_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/RST. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell eth_int_inst/reset_mgr/bl.fifo_36_inst_bl_1.fifo_36_bl_1_i_2__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) eth_int_inst/data_manager_blk/RX_DATA_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/RST,
+eth_int_inst/data_manager_blk/RX_DATA_INFO_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_18_inst_bl.fifo_18_bl/RST,
+eth_int_inst/data_manager_blk/RX_SRC_ADDR_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/RST
+eth_int_inst/data_manager_blk/RX_SRC_MAC_FIFO/FIFO_SYNC_MACRO_inst/bl.fifo_36_inst_bl_1.fifo_36_bl_1/RST. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell phy_inst/U0/pcs_pma_block_i/gig_ethernet_pcs_pma_0_core/gpcs_pma_inst/MGT_RESET.SYNC_ASYNC_RESET/MGT_RESET.RESET_INT_PIPE_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) phy_inst/U0/pcs_pma_block_i/gig_ethernet_pcs_pma_0_core/gpcs_pma_inst/MGT_RESET.RESET_INT_PIPE_reg/PRE
+phy_inst/U0/pcs_pma_block_i/gig_ethernet_pcs_pma_0_core/gpcs_pma_inst/MGT_RESET.RESET_INT_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell phy_inst/U0/pcs_pma_block_i/gig_ethernet_pcs_pma_0_core/gpcs_pma_inst/MGT_RESET.SYNC_ASYNC_RESET/reset_sync5 in site SLICE_X51Y55 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell phy_inst/U0/pcs_pma_block_i/gig_ethernet_pcs_pma_0_core/gpcs_pma_inst/MGT_RESET.SYNC_ASYNC_RESET/reset_sync6 is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell phy_inst/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/gtrxreset_seq_i/sync_gtrxreset_in/reset_sync5 in site SLICE_X50Y45 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell phy_inst/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/gtrxreset_seq_i/sync_gtrxreset_in/reset_sync6 is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#3 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell phy_inst/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/gtrxreset_seq_i/sync_rst_sync/reset_sync5 in site SLICE_X59Y50 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell phy_inst/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gtwizard_i/gt0_GTWIZARD_i/gtrxreset_seq_i/sync_rst_sync/reset_sync6 is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#4 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell phy_inst/U0/pcs_pma_block_i/transceiver_inst/reclock_encommaalign/reset_sync5 in site SLICE_X56Y59 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell phy_inst/U0/pcs_pma_block_i/transceiver_inst/reclock_encommaalign/reset_sync6 is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#5 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell phy_inst/U0/pcs_pma_block_i/transceiver_inst/reclock_rxreset/reset_sync5 in site SLICE_X52Y50 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell phy_inst/U0/pcs_pma_block_i/transceiver_inst/reclock_rxreset/reset_sync6 is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#6 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell phy_inst/U0/pcs_pma_block_i/transceiver_inst/reclock_txreset/reset_sync5 in site SLICE_X56Y51 is part of a synchronized register chain that is suboptimally placed as the load FDPE cell phy_inst/U0/pcs_pma_block_i/transceiver_inst/reclock_txreset/reset_sync6 is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#7 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell phy_inst/U0/pcs_pma_block_i/gig_ethernet_pcs_pma_0_core/gpcs_pma_inst/MGT_RESET.SRESET_PIPE_reg in site SLICE_X50Y57 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell phy_inst/U0/pcs_pma_block_i/gig_ethernet_pcs_pma_0_core/gpcs_pma_inst/MGT_RESET.SRESET_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#8 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell phy_inst/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gt0_rxresetfsm_i/sync_data_valid/data_sync_reg2 in site SLICE_X63Y61 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell phy_inst/U0/pcs_pma_block_i/transceiver_inst/gtwizard_inst/U0/gt0_rxresetfsm_i/sync_data_valid/data_sync_reg3 is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on adn2814_data_n relative to clock(s) adn2814_clk
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on adn2814_data_p relative to clock(s) adn2814_clk
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on adn2814_lol relative to clock(s) sysclk
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on adn2814_los relative to clock(s) sysclk
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on reset_n relative to clock(s) sysclk
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An output delay is missing on cdr_sfp_tx_n relative to clock(s) adn2814_clk, sysclk
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on cdr_sfp_tx_p relative to clock(s) adn2814_clk, sysclk
+Related violations: <none>
+
+TIMING-47#1 Warning
+False path or asynchronous clock group between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks adn2814_clk and ep_clk62p5 (see constraint position 49 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via set_false_path or set_clock_groups may result in failure in hardware.
+Related violations: <none>
+
+TIMING-47#2 Warning
+False path or asynchronous clock group between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks ep_clk62p5 and adn2814_clk (see constraint position 49 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via set_false_path or set_clock_groups may result in failure in hardware.
+Related violations: <none>
+
+TIMING-47#3 Warning
+False path or asynchronous clock group between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks ep_clk62p5 and mclk0 (see constraint position 49 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via set_false_path or set_clock_groups may result in failure in hardware.
+Related violations: <none>
+
+TIMING-47#4 Warning
+False path or asynchronous clock group between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks mclk1 and sclk200 (see constraint position 49 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via set_false_path or set_clock_groups may result in failure in hardware.
+Related violations: <none>
+
+TIMING-47#5 Warning
+False path or asynchronous clock group between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks sclk100 and sclk200 (see constraint position 49 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via set_false_path or set_clock_groups may result in failure in hardware.
+Related violations: <none>
+
+TIMING-56#1 Warning
+Missing logically or physically excluded clock groups constraint  
+Multiple clocks are user generated or auto-derived on the source pin endpoint_inst/mmcm1_inst/CLKFBOUT but are not logically or physically exclusive with respect to one another. To have the static timing analysis match the behavior in hardware, there cannot be multiple clocks generated on the same pin and when such situation occurs, the clocks should be defined as physically or logically exclusive. The list of clocks generated on the source pin is: mmcm1_clkfbout0, mmcm1_clkfbout1
+Related violations: <none>
+
+TIMING-56#2 Warning
+Missing logically or physically excluded clock groups constraint  
+Multiple clocks are user generated or auto-derived on the source pin endpoint_inst/mmcm1_inst/CLKOUT0 but are not logically or physically exclusive with respect to one another. To have the static timing analysis match the behavior in hardware, there cannot be multiple clocks generated on the same pin and when such situation occurs, the clocks should be defined as physically or logically exclusive. The list of clocks generated on the source pin is: fclk0, fclk1
+Related violations: <none>
+
+TIMING-56#3 Warning
+Missing logically or physically excluded clock groups constraint  
+Multiple clocks are user generated or auto-derived on the source pin endpoint_inst/mmcm1_inst/CLKOUT1 but are not logically or physically exclusive with respect to one another. To have the static timing analysis match the behavior in hardware, there cannot be multiple clocks generated on the same pin and when such situation occurs, the clocks should be defined as physically or logically exclusive. The list of clocks generated on the source pin is: mclk0, mclk1
+Related violations: <none>
+
+XDCV-2#1 Advisory
+Incomplete constraint coverage due to missing replicated objects.  
+The option '-to : [get_pins trig_sync_reg/D]' of the following constraint is attached to some original objects but not to all their replicated objects. Please review the missing replicated objects and assess if they need to be included in the constraint. Use 'get_cells or get_pins -include_replicated_objects <origObjectName>' to query all replicated objects associated with an original object.
+Current Constraint: set_false_path -from [get_pins trig_gbe*_reg_reg/C] -to [get_pins trig_sync_reg/D]
+Current XDC: /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/xilinx/constraints.xdc (Line: 53)
+Original cells:
+<none>
+Original pins:
+trig_sync_reg/D
+Related violations: <none>
+
+

@@ -1,0 +1,35 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2.2 (lin64) Build 3118627 Tue Feb  9 05:13:49 MST 2021
+| Date         : Mon Feb 20 14:52:27 2023
+| Host         : Edgar-Rincon running 64-bit Ubuntu 21.04
+| Command      : report_drc -file DAPHNE2_drc_opted.rpt -pb DAPHNE2_drc_opted.pb -rpx DAPHNE2_drc_opted.rpx
+| Design       : DAPHNE2
+| Device       : xc7a200tfbg676-3
+| Speed File   : -3
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 0
++------+----------+-------------+------------+
+| Rule | Severity | Description | Violations |
++------+----------+-------------+------------+
++------+----------+-------------+------------+
+
+2. REPORT DETAILS
+-----------------
+
