@@ -38,7 +38,7 @@ entity AFE_self_trigger is
         clk  : in  std_logic;
         i_data: in array_9x14_type;
         o_data : out array_9x14_type;
-        o_trigger : out std_logic_vector(7 downto 0) 
+        o_trigger : out std_logic_vector(7 downto 0)
     );
 end AFE_self_trigger;
 
@@ -71,6 +71,8 @@ begin
                 o_trigger => o_trigger(i)
             );
     end generate gen_self_trigger;
+    
+    o_data(8) <= i_data(8); 
 
 
 end Behavioral;
