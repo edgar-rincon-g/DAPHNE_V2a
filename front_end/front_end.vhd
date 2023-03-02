@@ -65,8 +65,18 @@ architecture fe_arch of front_end is
     end component;
 
     signal clock_out_temp: std_logic;
-    signal data_afe0 : array_9x14_type;
-    signal self_trigger_afe0 : std_logic_vector(7 downto 0);
+--    signal data_afe0 : array_9x14_type;
+--    signal self_trigger_afe0 : std_logic_vector(7 downto 0);
+--    signal data_afe1 : array_9x14_type;
+--    signal self_trigger_afe1 : std_logic_vector(7 downto 0);
+--    signal data_afe2 : array_9x14_type;
+--    signal self_trigger_afe2 : std_logic_vector(7 downto 0);
+--    signal data_afe3 : array_9x14_type;
+--    signal self_trigger_afe3 : std_logic_vector(7 downto 0);
+--    signal data_afe4 : array_9x14_type;
+--    signal self_trigger_afe4 : std_logic_vector(7 downto 0);
+    signal data_afe : array_5x9x14_type;
+    signal self_trigger_afe : array_5x8_type;
 
 begin
 
@@ -115,36 +125,19 @@ begin
 --        );
 --    end generate gen_afe;
 
-    
-    
+  gen_self_trigger: for i in 4 downto 0 generate
     self_trigger_inst: AFE_self_trigger
         Port map(
             clk => clock,
-            i_data => data_afe0,
-            o_data => dout(0),
-            o_trigger =>  self_trigger_afe0
+            i_data => data_afe(i),
+            o_data => dout(i),
+            o_trigger =>  self_trigger_afe(i)
         );
         
+    end generate gen_self_trigger;
     
-
-gen_afe: for i in 4 downto 0 generate
-    AFE0: IF (i=0) generate
-        afe_inst: auto_afe
-        port map(
-            afe_p => afe_p(0),
-            afe_n => afe_n(0),
-            clock => clock,
-            clock7x => clock7x,
-            reset => reset_clock,  -- sync to clock, 3 pulses wide
-            done => done(i),
-            warn => warn(i),
-            errcnt => errcnt(i),
-            dout => data_afe0
-        );
-    end generate AFE0;
-        
-    AFE1_4: IF (i>0) generate
-        afe_inst: auto_afe
+  gen_afe: for i in 4 downto 0 generate
+    afe_inst: auto_afe
         port map(
             afe_p => afe_p(i),
             afe_n => afe_n(i),
@@ -154,14 +147,62 @@ gen_afe: for i in 4 downto 0 generate
             done => done(i),
             warn => warn(i),
             errcnt => errcnt(i),
-            dout => dout(i)
+            dout => data_afe(i)
         );
-    end generate AFE1_4;       
+           
  end generate gen_afe;
+
+--gen_afe: for i in 4 downto 0 generate
+--    AFE0: IF (i=0) generate
+--        afe_inst: auto_afe
+--        port map(
+--            afe_p => afe_p(0),
+--            afe_n => afe_n(0),
+--            clock => clock,
+--            clock7x => clock7x,
+--            reset => reset_clock,  -- sync to clock, 3 pulses wide
+--            done => done(i),
+--            warn => warn(i),
+--            errcnt => errcnt(i),
+--            dout => data_afe0
+--        );
+--    end generate AFE0;
+        
+--    AFE1_4: IF (i>0) generate
+--        afe_inst: auto_afe
+--        port map(
+--            afe_p => afe_p(i),
+--            afe_n => afe_n(i),
+--            clock => clock,
+--            clock7x => clock7x,
+--            reset => reset_clock,  -- sync to clock, 3 pulses wide
+--            done => done(i),
+--            warn => warn(i),
+--            errcnt => errcnt(i),
+--            dout => dout(i)
+--        );
+--    end generate AFE1_4;       
+-- end generate gen_afe;
     
-fe_trigger <= self_trigger_afe0(0) or  self_trigger_afe0(1) or
-                self_trigger_afe0(2) or self_trigger_afe0(3) or
-                self_trigger_afe0(4) or self_trigger_afe0(5) or
-                self_trigger_afe0(6) or self_trigger_afe0(7);
+fe_trigger <= self_trigger_afe(0)(0) or  self_trigger_afe(0)(1) or
+                self_trigger_afe(0)(2) or self_trigger_afe(0)(3) or
+                self_trigger_afe(0)(4) or self_trigger_afe(0)(5) or
+                self_trigger_afe(0)(6) or self_trigger_afe(0)(7) or
+                self_trigger_afe(1)(0) or self_trigger_afe(1)(1) or
+                self_trigger_afe(1)(2) or self_trigger_afe(1)(3) or
+                self_trigger_afe(1)(4) or self_trigger_afe(1)(5) or
+                self_trigger_afe(1)(6) or self_trigger_afe(1)(7) or
+                self_trigger_afe(2)(0) or self_trigger_afe(2)(1) or
+                self_trigger_afe(2)(2) or self_trigger_afe(2)(3) or
+                self_trigger_afe(2)(4) or self_trigger_afe(2)(5) or
+                self_trigger_afe(2)(6) or self_trigger_afe(2)(7) or
+                self_trigger_afe(3)(0) or self_trigger_afe(3)(1) or
+                self_trigger_afe(3)(2) or self_trigger_afe(3)(3) or
+                self_trigger_afe(3)(4) or self_trigger_afe(3)(5) or
+                self_trigger_afe(3)(6) or self_trigger_afe(3)(7) or
+                self_trigger_afe(4)(0) or self_trigger_afe(4)(1) or
+                self_trigger_afe(4)(2) or self_trigger_afe(4)(3) or
+                self_trigger_afe(4)(4) or self_trigger_afe(4)(5) or
+                self_trigger_afe(4)(6) or self_trigger_afe(4)(7);
 
 end fe_arch;

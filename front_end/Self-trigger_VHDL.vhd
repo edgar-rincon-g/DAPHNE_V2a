@@ -216,31 +216,50 @@ architecture Behavioral of self_trigger is
 --    to_signed(integer(0), g_INPUT_WIDTH), to_signed(integer(0), g_INPUT_WIDTH), to_signed(integer(0), g_INPUT_WIDTH), 
 --    to_signed(integer(0), g_INPUT_WIDTH), to_signed(integer(0), g_INPUT_WIDTH), to_signed(integer(0), g_INPUT_WIDTH), 
 --    to_signed(integer(0), g_INPUT_WIDTH), to_signed(integer(0), g_INPUT_WIDTH));
-type TEMPLATE is array(0 to 63) of signed(g_INPUT_WIDTH - 1 downto 0);
- constant c_templ: template := ( to_signed(integer(0), g_INPUT_WIDTH), to_signed(integer(1),g_INPUT_WIDTH ), 
-    to_signed(integer(1), g_INPUT_WIDTH ), to_signed(integer(1), g_INPUT_WIDTH), to_signed(integer(2), g_INPUT_WIDTH), 
-    to_signed(integer(2), g_INPUT_WIDTH), to_signed(integer(2), g_INPUT_WIDTH), to_signed(integer(3), g_INPUT_WIDTH), 
-    to_signed(integer(3), g_INPUT_WIDTH), to_signed(integer(4), g_INPUT_WIDTH), to_signed(integer(4), g_INPUT_WIDTH), 
-    to_signed(integer(5), g_INPUT_WIDTH), to_signed(integer(5), g_INPUT_WIDTH), to_signed(integer(6), g_INPUT_WIDTH), 
-    to_signed(integer(6), g_INPUT_WIDTH), to_signed(integer(7), g_INPUT_WIDTH), to_signed(integer(7), g_INPUT_WIDTH), 
-    to_signed(integer(8), g_INPUT_WIDTH), to_signed(integer(8), g_INPUT_WIDTH), to_signed(integer(8), g_INPUT_WIDTH), 
-    to_signed(integer(9), g_INPUT_WIDTH), to_signed(integer(9), g_INPUT_WIDTH), to_signed(integer(8), g_INPUT_WIDTH), 
-    to_signed(integer(8), g_INPUT_WIDTH), to_signed(integer(8), g_INPUT_WIDTH), to_signed(integer(7), g_INPUT_WIDTH),
-    to_signed(integer(6), g_INPUT_WIDTH), to_signed(integer(5), g_INPUT_WIDTH), to_signed(integer(4), g_INPUT_WIDTH), 
-    to_signed(integer(2), g_INPUT_WIDTH), to_signed(integer(0), g_INPUT_WIDTH), to_signed(integer(-2), g_INPUT_WIDTH), 
-    to_signed(integer(-5), g_INPUT_WIDTH), to_signed(integer(-7), g_INPUT_WIDTH), to_signed(integer(-10), g_INPUT_WIDTH), 
-    to_signed(integer(-14), g_INPUT_WIDTH), to_signed(integer(-17), g_INPUT_WIDTH), to_signed(integer(-21), g_INPUT_WIDTH), 
-    to_signed(integer(-25), g_INPUT_WIDTH), to_signed(integer(-30), g_INPUT_WIDTH), to_signed(integer(-34), g_INPUT_WIDTH), 
-    to_signed(integer(-39), g_INPUT_WIDTH), to_signed(integer(-44), g_INPUT_WIDTH), to_signed(integer(-48), g_INPUT_WIDTH), 
-    to_signed(integer(-53), g_INPUT_WIDTH), to_signed(integer(-58), g_INPUT_WIDTH), to_signed(integer(-62), g_INPUT_WIDTH),
-    to_signed(integer(-66), g_INPUT_WIDTH), to_signed(integer(-70), g_INPUT_WIDTH), to_signed(integer(-73), g_INPUT_WIDTH), 
-    to_signed(integer(-76), g_INPUT_WIDTH), to_signed(integer(-77), g_INPUT_WIDTH), to_signed(integer(-78), g_INPUT_WIDTH), 
-    to_signed(integer(-78), g_INPUT_WIDTH), to_signed(integer(-76), g_INPUT_WIDTH), to_signed(integer(-73), g_INPUT_WIDTH), 
-    to_signed(integer(-69), g_INPUT_WIDTH), to_signed(integer(-62), g_INPUT_WIDTH), to_signed(integer(-54), g_INPUT_WIDTH), 
-    to_signed(integer(-44), g_INPUT_WIDTH), to_signed(integer(-32), g_INPUT_WIDTH), to_signed(integer(-17), g_INPUT_WIDTH), 
-    to_signed(integer(0), g_INPUT_WIDTH), to_signed(integer(0), g_INPUT_WIDTH));
+--type TEMPLATE is array(0 to 63) of signed(g_INPUT_WIDTH - 1 downto 0);
+-- constant c_templ: template := ( to_signed(integer(0), g_INPUT_WIDTH), to_signed(integer(1),g_INPUT_WIDTH ), 
+--    to_signed(integer(1), g_INPUT_WIDTH ), to_signed(integer(1), g_INPUT_WIDTH), to_signed(integer(2), g_INPUT_WIDTH), 
+--    to_signed(integer(2), g_INPUT_WIDTH), to_signed(integer(2), g_INPUT_WIDTH), to_signed(integer(3), g_INPUT_WIDTH), 
+--    to_signed(integer(3), g_INPUT_WIDTH), to_signed(integer(4), g_INPUT_WIDTH), to_signed(integer(4), g_INPUT_WIDTH), 
+--    to_signed(integer(5), g_INPUT_WIDTH), to_signed(integer(5), g_INPUT_WIDTH), to_signed(integer(6), g_INPUT_WIDTH), 
+--    to_signed(integer(6), g_INPUT_WIDTH), to_signed(integer(7), g_INPUT_WIDTH), to_signed(integer(7), g_INPUT_WIDTH), 
+--    to_signed(integer(8), g_INPUT_WIDTH), to_signed(integer(8), g_INPUT_WIDTH), to_signed(integer(8), g_INPUT_WIDTH), 
+--    to_signed(integer(9), g_INPUT_WIDTH), to_signed(integer(9), g_INPUT_WIDTH), to_signed(integer(8), g_INPUT_WIDTH), 
+--    to_signed(integer(8), g_INPUT_WIDTH), to_signed(integer(8), g_INPUT_WIDTH), to_signed(integer(7), g_INPUT_WIDTH),
+--    to_signed(integer(6), g_INPUT_WIDTH), to_signed(integer(5), g_INPUT_WIDTH), to_signed(integer(4), g_INPUT_WIDTH), 
+--    to_signed(integer(2), g_INPUT_WIDTH), to_signed(integer(0), g_INPUT_WIDTH), to_signed(integer(-2), g_INPUT_WIDTH), 
+--    to_signed(integer(-5), g_INPUT_WIDTH), to_signed(integer(-7), g_INPUT_WIDTH), to_signed(integer(-10), g_INPUT_WIDTH), 
+--    to_signed(integer(-14), g_INPUT_WIDTH), to_signed(integer(-17), g_INPUT_WIDTH), to_signed(integer(-21), g_INPUT_WIDTH), 
+--    to_signed(integer(-25), g_INPUT_WIDTH), to_signed(integer(-30), g_INPUT_WIDTH), to_signed(integer(-34), g_INPUT_WIDTH), 
+--    to_signed(integer(-39), g_INPUT_WIDTH), to_signed(integer(-44), g_INPUT_WIDTH), to_signed(integer(-48), g_INPUT_WIDTH), 
+--    to_signed(integer(-53), g_INPUT_WIDTH), to_signed(integer(-58), g_INPUT_WIDTH), to_signed(integer(-62), g_INPUT_WIDTH),
+--    to_signed(integer(-66), g_INPUT_WIDTH), to_signed(integer(-70), g_INPUT_WIDTH), to_signed(integer(-73), g_INPUT_WIDTH), 
+--    to_signed(integer(-76), g_INPUT_WIDTH), to_signed(integer(-77), g_INPUT_WIDTH), to_signed(integer(-78), g_INPUT_WIDTH), 
+--    to_signed(integer(-78), g_INPUT_WIDTH), to_signed(integer(-76), g_INPUT_WIDTH), to_signed(integer(-73), g_INPUT_WIDTH), 
+--    to_signed(integer(-69), g_INPUT_WIDTH), to_signed(integer(-62), g_INPUT_WIDTH), to_signed(integer(-54), g_INPUT_WIDTH), 
+--    to_signed(integer(-44), g_INPUT_WIDTH), to_signed(integer(-32), g_INPUT_WIDTH), to_signed(integer(-17), g_INPUT_WIDTH), 
+--    to_signed(integer(0), g_INPUT_WIDTH), to_signed(integer(0), g_INPUT_WIDTH));
         
- 
+ type TEMPLATE is array(0 to 15) of signed(g_INPUT_WIDTH - 1 downto 0);
+ constant c_templ: template := ( 
+    to_signed(integer(-66), g_INPUT_WIDTH), 
+    to_signed(integer(-70), g_INPUT_WIDTH), 
+    to_signed(integer(-73), g_INPUT_WIDTH), 
+    to_signed(integer(-76), g_INPUT_WIDTH),
+    to_signed(integer(-77), g_INPUT_WIDTH), 
+    to_signed(integer(-78), g_INPUT_WIDTH), 
+    to_signed(integer(-78), g_INPUT_WIDTH), 
+    to_signed(integer(-76), g_INPUT_WIDTH), 
+    to_signed(integer(-73), g_INPUT_WIDTH), 
+    to_signed(integer(-69), g_INPUT_WIDTH), 
+    to_signed(integer(-62), g_INPUT_WIDTH), 
+    to_signed(integer(-54), g_INPUT_WIDTH), 
+    to_signed(integer(-44), g_INPUT_WIDTH), 
+    to_signed(integer(-32), g_INPUT_WIDTH), 
+    to_signed(integer(-17), g_INPUT_WIDTH), 
+    to_signed(integer(0), g_INPUT_WIDTH)
+  ); 
+
  
 
 begin
@@ -357,54 +376,54 @@ begin
             r_multdata_13 <= r_data_13*c_templ(13);
             r_multdata_14 <= r_data_14*c_templ(14);
             r_multdata_15 <= r_data_15*c_templ(15);
-            r_multdata_16 <= r_data_16*c_templ(16);
-            r_multdata_17 <= r_data_17*c_templ(17);
-            r_multdata_18 <= r_data_18*c_templ(18);
-            r_multdata_19 <= r_data_19*c_templ(19);
-            r_multdata_20 <= r_data_20*c_templ(20);
-            r_multdata_21 <= r_data_21*c_templ(21);
-            r_multdata_22 <= r_data_22*c_templ(22);
-            r_multdata_23 <= r_data_23*c_templ(23);
-            r_multdata_24 <= r_data_24*c_templ(24);
-            r_multdata_25 <= r_data_25*c_templ(25);
-            r_multdata_26 <= r_data_26*c_templ(26);
-            r_multdata_27 <= r_data_27*c_templ(27);
-            r_multdata_28 <= r_data_28*c_templ(28);
-            r_multdata_29 <= r_data_29*c_templ(29);
-            r_multdata_30 <= r_data_30*c_templ(30);
-            r_multdata_31 <= r_data_31*c_templ(31);
-            r_multdata_32 <= r_data_32*c_templ(32);
-            r_multdata_33 <= r_data_33*c_templ(33);
-            r_multdata_34 <= r_data_34*c_templ(34);
-            r_multdata_35 <= r_data_35*c_templ(35);
-            r_multdata_36 <= r_data_36*c_templ(36);
-            r_multdata_37 <= r_data_37*c_templ(37);
-            r_multdata_38 <= r_data_38*c_templ(38);
-            r_multdata_39 <= r_data_39*c_templ(39);
-            r_multdata_40 <= r_data_40*c_templ(40);
-            r_multdata_41 <= r_data_41*c_templ(41);
-            r_multdata_42 <= r_data_42*c_templ(42);
-            r_multdata_43 <= r_data_43*c_templ(43);
-            r_multdata_44 <= r_data_44*c_templ(44);
-            r_multdata_45 <= r_data_45*c_templ(45);
-            r_multdata_46 <= r_data_46*c_templ(46);
-            r_multdata_47 <= r_data_47*c_templ(47);
-            r_multdata_48 <= r_data_48*c_templ(48);
-            r_multdata_49 <= r_data_49*c_templ(49);
-            r_multdata_50 <= r_data_50*c_templ(50);
-            r_multdata_51 <= r_data_51*c_templ(51);
-            r_multdata_52 <= r_data_52*c_templ(52);
-            r_multdata_53 <= r_data_53*c_templ(53);
-            r_multdata_54 <= r_data_54*c_templ(54);
-            r_multdata_55 <= r_data_55*c_templ(55);
-            r_multdata_56 <= r_data_56*c_templ(56);
-            r_multdata_57 <= r_data_57*c_templ(57);
-            r_multdata_58 <= r_data_58*c_templ(58);
-            r_multdata_59 <= r_data_59*c_templ(59);
-            r_multdata_60 <= r_data_60*c_templ(60);
-            r_multdata_61 <= r_data_61*c_templ(61);
-            r_multdata_62 <= r_data_62*c_templ(62);
-            r_multdata_63 <= r_data_63*c_templ(63);
+--            r_multdata_16 <= r_data_16*c_templ(16);
+--            r_multdata_17 <= r_data_17*c_templ(17);
+--            r_multdata_18 <= r_data_18*c_templ(18);
+--            r_multdata_19 <= r_data_19*c_templ(19);
+--            r_multdata_20 <= r_data_20*c_templ(20);
+--            r_multdata_21 <= r_data_21*c_templ(21);
+--            r_multdata_22 <= r_data_22*c_templ(22);
+--            r_multdata_23 <= r_data_23*c_templ(23);
+--            r_multdata_24 <= r_data_24*c_templ(24);
+--            r_multdata_25 <= r_data_25*c_templ(25);
+--            r_multdata_26 <= r_data_26*c_templ(26);
+--            r_multdata_27 <= r_data_27*c_templ(27);
+--            r_multdata_28 <= r_data_28*c_templ(28);
+--            r_multdata_29 <= r_data_29*c_templ(29);
+--            r_multdata_30 <= r_data_30*c_templ(30);
+--            r_multdata_31 <= r_data_31*c_templ(31);
+--            r_multdata_32 <= r_data_32*c_templ(32);
+--            r_multdata_33 <= r_data_33*c_templ(33);
+--            r_multdata_34 <= r_data_34*c_templ(34);
+--            r_multdata_35 <= r_data_35*c_templ(35);
+--            r_multdata_36 <= r_data_36*c_templ(36);
+--            r_multdata_37 <= r_data_37*c_templ(37);
+--            r_multdata_38 <= r_data_38*c_templ(38);
+--            r_multdata_39 <= r_data_39*c_templ(39);
+--            r_multdata_40 <= r_data_40*c_templ(40);
+--            r_multdata_41 <= r_data_41*c_templ(41);
+--            r_multdata_42 <= r_data_42*c_templ(42);
+--            r_multdata_43 <= r_data_43*c_templ(43);
+--            r_multdata_44 <= r_data_44*c_templ(44);
+--            r_multdata_45 <= r_data_45*c_templ(45);
+--            r_multdata_46 <= r_data_46*c_templ(46);
+--            r_multdata_47 <= r_data_47*c_templ(47);
+--            r_multdata_48 <= r_data_48*c_templ(48);
+--            r_multdata_49 <= r_data_49*c_templ(49);
+--            r_multdata_50 <= r_data_50*c_templ(50);
+--            r_multdata_51 <= r_data_51*c_templ(51);
+--            r_multdata_52 <= r_data_52*c_templ(52);
+--            r_multdata_53 <= r_data_53*c_templ(53);
+--            r_multdata_54 <= r_data_54*c_templ(54);
+--            r_multdata_55 <= r_data_55*c_templ(55);
+--            r_multdata_56 <= r_data_56*c_templ(56);
+--            r_multdata_57 <= r_data_57*c_templ(57);
+--            r_multdata_58 <= r_data_58*c_templ(58);
+--            r_multdata_59 <= r_data_59*c_templ(59);
+--            r_multdata_60 <= r_data_60*c_templ(60);
+--            r_multdata_61 <= r_data_61*c_templ(61);
+--            r_multdata_62 <= r_data_62*c_templ(62);
+--            r_multdata_63 <= r_data_63*c_templ(63);
             
 --            r_sumamult <= shift_right((r_multdata_0 + r_multdata_1 + r_multdata_2 + 
 --                r_multdata_3 + r_multdata_4 + r_multdata_5 + r_multdata_6 + 
@@ -423,23 +442,28 @@ begin
 --                r_multdata_55 + r_multdata_56 + r_multdata_57 + r_multdata_58 +
 --                r_multdata_59 + r_multdata_60 + r_multdata_61 + r_multdata_62 + 
 --                r_multdata_63), 5);
-            r_sumamult <= (r_multdata_0 + r_multdata_1 + r_multdata_2 + 
+--            r_sumamult <= (r_multdata_0 + r_multdata_1 + r_multdata_2 + 
+--                r_multdata_3 + r_multdata_4 + r_multdata_5 + r_multdata_6 + 
+--                r_multdata_7 + r_multdata_8 + r_multdata_9 + r_multdata_10 + 
+--                r_multdata_11 + r_multdata_12 + r_multdata_13 + r_multdata_14 + 
+--                r_multdata_15 + r_multdata_16 + r_multdata_17 + r_multdata_18 +
+--                r_multdata_19 + r_multdata_20 + r_multdata_21 + r_multdata_22 + 
+--                r_multdata_23 + r_multdata_24 + r_multdata_25 + r_multdata_26 + 
+--                r_multdata_27 + r_multdata_28 + r_multdata_29 + r_multdata_30 + 
+--                r_multdata_31 + r_multdata_32 + r_multdata_33 + r_multdata_34 + 
+--                r_multdata_35 + r_multdata_36 + r_multdata_37 + r_multdata_38 +
+--                r_multdata_39 + r_multdata_40 + r_multdata_41 + r_multdata_42 + 
+--                r_multdata_43 + r_multdata_44 + r_multdata_45 + r_multdata_46 + 
+--                r_multdata_47 + r_multdata_48 + r_multdata_49 + r_multdata_50 + 
+--                r_multdata_51 + r_multdata_52 + r_multdata_53 + r_multdata_54 + 
+--                r_multdata_55 + r_multdata_56 + r_multdata_57 + r_multdata_58 +
+--                r_multdata_59 + r_multdata_60 + r_multdata_61 + r_multdata_62 + 
+--                r_multdata_63);
+r_sumamult <= (r_multdata_0 + r_multdata_1 + r_multdata_2 + 
                 r_multdata_3 + r_multdata_4 + r_multdata_5 + r_multdata_6 + 
                 r_multdata_7 + r_multdata_8 + r_multdata_9 + r_multdata_10 + 
                 r_multdata_11 + r_multdata_12 + r_multdata_13 + r_multdata_14 + 
-                r_multdata_15 + r_multdata_16 + r_multdata_17 + r_multdata_18 +
-                r_multdata_19 + r_multdata_20 + r_multdata_21 + r_multdata_22 + 
-                r_multdata_23 + r_multdata_24 + r_multdata_25 + r_multdata_26 + 
-                r_multdata_27 + r_multdata_28 + r_multdata_29 + r_multdata_30 + 
-                r_multdata_31 + r_multdata_32 + r_multdata_33 + r_multdata_34 + 
-                r_multdata_35 + r_multdata_36 + r_multdata_37 + r_multdata_38 +
-                r_multdata_39 + r_multdata_40 + r_multdata_41 + r_multdata_42 + 
-                r_multdata_43 + r_multdata_44 + r_multdata_45 + r_multdata_46 + 
-                r_multdata_47 + r_multdata_48 + r_multdata_49 + r_multdata_50 + 
-                r_multdata_51 + r_multdata_52 + r_multdata_53 + r_multdata_54 + 
-                r_multdata_55 + r_multdata_56 + r_multdata_57 + r_multdata_58 +
-                r_multdata_59 + r_multdata_60 + r_multdata_61 + r_multdata_62 + 
-                r_multdata_63);
+                r_multdata_15);
            
         end if;    
     end process;

@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2.2 (lin64) Build 3118627 Tue Feb  9 05:13:49 MST 2021
-| Date         : Tue Feb 21 11:47:37 2023
+| Date         : Thu Mar  2 13:31:03 2023
 | Host         : Edgar-Rincon running 64-bit Ubuntu 21.04
 | Command      : report_utilization -file DAPHNE2_utilization_synth.rpt -pb DAPHNE2_utilization_synth.pb
 | Design       : DAPHNE2
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                |  7398 |     0 |    134600 |  5.50 |
-|   LUT as Logic             |  5637 |     0 |    134600 |  4.19 |
-|   LUT as Memory            |  1761 |     0 |     46200 |  3.81 |
+| Slice LUTs*                |  8188 |     0 |    134600 |  6.08 |
+|   LUT as Logic             |  5419 |     0 |    134600 |  4.03 |
+|   LUT as Memory            |  2769 |     0 |     46200 |  5.99 |
 |     LUT as Distributed RAM |     0 |     0 |           |       |
-|     LUT as Shift Register  |  1761 |     0 |           |       |
-| Slice Registers            | 14047 |     0 |    269200 |  5.22 |
-|   Register as Flip Flop    | 14047 |     0 |    269200 |  5.22 |
+|     LUT as Shift Register  |  2769 |     0 |           |       |
+| Slice Registers            | 14415 |     0 |    269200 |  5.35 |
+|   Register as Flip Flop    | 14415 |     0 |    269200 |  5.35 |
 |   Register as Latch        |     0 |     0 |    269200 |  0.00 |
 | F7 Muxes                   |   258 |     0 |     67300 |  0.38 |
 | F8 Muxes                   |    45 |     0 |     33650 |  0.13 |
@@ -59,7 +59,7 @@ Table of Contents
 | 64    |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 189   |          Yes |         Set |            - |
-| 13794 |          Yes |       Reset |            - |
+| 14162 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -86,8 +86,8 @@ Table of Contents
 +----------------+------+-------+-----------+-------+
 |    Site Type   | Used | Fixed | Available | Util% |
 +----------------+------+-------+-----------+-------+
-| DSPs           |  448 |     0 |       740 | 60.54 |
-|   DSP48E1 only |  448 |       |           |       |
+| DSPs           |  600 |     0 |       740 | 81.08 |
+|   DSP48E1 only |  600 |       |           |       |
 +----------------+------+-------+-----------+-------+
 
 
@@ -160,20 +160,19 @@ Table of Contents
 +------------+-------+---------------------+
 |  Ref Name  |  Used | Functional Category |
 +------------+-------+---------------------+
-| FDRE       | 13794 |        Flop & Latch |
-| LUT6       |  2440 |                 LUT |
-| SRLC32E    |  1648 |  Distributed Memory |
-| LUT2       |  1110 |                 LUT |
-| LUT4       |   963 |                 LUT |
-| LUT3       |   914 |                 LUT |
-| LUT5       |   866 |                 LUT |
-| CARRY4     |   628 |          CarryLogic |
-| DSP48E1    |   448 |    Block Arithmetic |
+| FDRE       | 14162 |        Flop & Latch |
+| SRLC32E    |  2768 |  Distributed Memory |
+| LUT6       |  2359 |                 LUT |
+| LUT2       |  1518 |                 LUT |
+| LUT5       |   858 |                 LUT |
+| LUT4       |   802 |                 LUT |
+| LUT3       |   674 |                 LUT |
+| DSP48E1    |   600 |    Block Arithmetic |
+| CARRY4     |   572 |          CarryLogic |
+| LUT1       |   333 |                 LUT |
 | MUXF7      |   258 |               MuxFx |
-| LUT1       |   253 |                 LUT |
 | RAMB18E1   |   204 |        Block Memory |
 | FDSE       |   189 |        Flop & Latch |
-| SRL16E     |   113 |  Distributed Memory |
 | ISERDESE2  |    90 |                  IO |
 | FDPE       |    64 |        Flop & Latch |
 | IBUFDS     |    48 |                  IO |
@@ -187,6 +186,7 @@ Table of Contents
 | OBUFT      |    10 |                  IO |
 | MMCME2_ADV |     3 |               Clock |
 | OBUFDS     |     2 |                  IO |
+| SRL16E     |     1 |  Distributed Memory |
 | RAMB36E1   |     1 |        Block Memory |
 | ODDR       |     1 |                  IO |
 | IDELAYCTRL |     1 |                  IO |
