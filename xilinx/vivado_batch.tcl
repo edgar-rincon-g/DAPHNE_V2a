@@ -17,6 +17,8 @@ read_vhdl ../daphne2_package.vhd
 read_vhdl ../front_end/febit.vhd
 read_vhdl ../front_end/auto_fsm.vhd
 read_vhdl ../front_end/auto_afe.vhd
+read_vhdl ../front_end/Self-trigger_VHDL.vhd
+read_vhdl ../front_end/AFE_self_trigger.vhd
 read_vhdl ../front_end/front_end.vhd
 
 read_vhdl ../spy/spy.vhd
@@ -115,10 +117,12 @@ puts "INFO: passing git commit number $v_git_sha to top level generic"
 # synth design...
 
 synth_design -top daphne2 -generic version=$v_git_sha
+show_schematic [get_ports]
 report_clocks -file $outputDir/clocks.rpt
 report_timing_summary -file $outputDir/post_synth_timing_summary.rpt
 report_power -file $outputDir/post_synth_power.rpt
 report_utilization -file $outputDir/post_synth_util.rpt
+
 
 # place...
 
