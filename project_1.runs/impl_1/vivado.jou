@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Jun  9 10:59:10 2023
+# Process ID: 63462
+# Current directory: /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/impl_1
+# Command line: vivado -log DAPHNE2.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source DAPHNE2.tcl -notrace
+# Log file: /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/impl_1/DAPHNE2.vdi
+# Journal file: /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/impl_1/vivado.jou
+# Running On: Edgar-Rincon, OS: Linux, CPU Frequency: 2700.000 MHz, CPU Physical cores: 6, Host memory: 33250 MB
+#-----------------------------------------------------------
+source DAPHNE2.tcl -notrace

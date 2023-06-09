@@ -58,6 +58,7 @@ architecture fe_arch of front_end is
     component AFE_self_trigger
         Port (
             clk  : in  std_logic;
+            rst  : in  std_logic;
             i_data: in array_9x14_type;
             o_data : out array_9x14_type;
             o_trigger : out std_logic_vector(7 downto 0) 
@@ -129,6 +130,7 @@ begin
     self_trigger_inst: AFE_self_trigger
         Port map(
             clk => clock,
+            rst => reset_clock,
             i_data => data_afe(i),
             o_data => dout(i),
             o_trigger =>  self_trigger_afe(i)

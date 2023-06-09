@@ -70,7 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-5497-Edgar-Rincon/incrSyn
+set_param chipscope.maxJobs 3
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-4375-Edgar-Rincon/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {Common 17-55}  -new_severity {WARNING} 
@@ -116,6 +118,7 @@ read_vhdl -library xil_defaultlib {
   /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/data_manager/data_manager.vhd
   /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/dataout_mux.vhd
   /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/decipherer.vhd
+  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/dsp_slice.vhd
   /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/core/stream/dstr4.vhd
   /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/endpoint.vhd
   /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/ethernet_controller.vhd
@@ -126,6 +129,7 @@ read_vhdl -library xil_defaultlib {
   /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/febit.vhd
   /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/filter_data_out.vhd
   /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/front_end.vhd
+  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd
   /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/icmp_ping_checksum_calc.vhd
   /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/icmp_ping_shift_reg.vhd
   /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/ip_checksum_calc.vhd
