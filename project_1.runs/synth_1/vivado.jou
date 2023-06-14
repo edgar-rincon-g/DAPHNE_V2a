@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # Vivado v2022.2 (64-bit)
-# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Tue Jun 13 14:26:07 2023
-# Process ID: 33212
-# Current directory: C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/project_1.runs/synth_1
-# Command line: vivado.exe -log DAPHNE2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DAPHNE2.tcl
-# Log file: C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/project_1.runs/synth_1/DAPHNE2.vds
-# Journal file: C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/project_1.runs/synth_1\vivado.jou
-# Running On: DANIELAVILA, OS: Windows, CPU Frequency: 3592 MHz, CPU Physical cores: 4, Host memory: 17099 MB
+# Start of session at: Wed Jun 14 08:56:05 2023
+# Process ID: 7670
+# Current directory: /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1
+# Command line: vivado -log DAPHNE2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DAPHNE2.tcl
+# Log file: /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/DAPHNE2.vds
+# Journal file: /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/vivado.jou
+# Running On: Edgar-Rincon, OS: Linux, CPU Frequency: 2700.000 MHz, CPU Physical cores: 6, Host memory: 33250 MB
 #-----------------------------------------------------------
 source DAPHNE2.tcl -notrace
