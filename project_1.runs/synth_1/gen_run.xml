@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tfbg676-3" LaunchTime="1686325921">
-  <File Type="VDS-TIMINGSUMMARY" Name="DAPHNE2_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="DAPHNE2.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="DAPHNE2_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="DAPHNE2_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="DAPHNE2_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="DAPHNE2.vds"/>
-  <File Type="REPORTS-TCL" Name="DAPHNE2_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="DAPHNE2_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a200tfbg676-3" LaunchTime="1686684362">
   <File Type="PA-TCL" Name="DAPHNE2.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="DAPHNE2_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="DAPHNE2_reports.tcl"/>
+  <File Type="RDS-RDS" Name="DAPHNE2.vds"/>
+  <File Type="RDS-UTIL" Name="DAPHNE2_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="DAPHNE2_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="DAPHNE2.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="DAPHNE2_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="DAPHNE2_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/ip/daphne2_daq_txonly/daphne2_daq_txonly.xci">

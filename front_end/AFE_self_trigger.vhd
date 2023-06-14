@@ -62,7 +62,7 @@ architecture Behavioral of AFE_self_trigger is
     component highPass_FirstOrder
         generic(
             Data_Size: integer := 14;
-            Coefficient_Resolution : integer := 16 -- One more than decimal desired
+            Coefficient_Resolution : integer := 17 -- One more than decimal desired
         );
         port(
             rst : in std_logic; -- Reset for the filter

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/DAPHNE2.tcl"
+  variable script "C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/project_1.runs/synth_1/DAPHNE2.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,11 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-4375-Edgar-Rincon/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_param chipscope.maxJobs 2
 set_msg_config  -id {Common 17-55}  -new_severity {WARNING} 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a200tfbg676-3
@@ -83,97 +79,97 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.cache/wt [current_project]
-set_property parent.project_path /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/project_1.cache/wt [current_project]
+set_property parent.project_path C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/project_1.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.cache/ip [current_project]
+set_property ip_output_repo c:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/crc_chk.v
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/crc_gen.v
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/crc_chk.v
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/crc_gen.v
 }
 read_vhdl -library xil_defaultlib {
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/daphne2_package.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/hdl/params_package.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/address_container.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/arp_reply.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/auto_afe.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/auto_fsm.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/data_manager/burst_controller_sm.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/hdl/burst_traffic_controller.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/core/core.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/core/crc20_update.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/crc_splice.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/create_packet.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/fifo.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/data_manager/rx_ctl.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/data_manager/ram_comm_dec.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/data_manager/tx_seq_ctl.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/data_manager/data_manager.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/dataout_mux.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/decipherer.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/dsp_slice.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/core/stream/dstr4.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/endpoint.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/ethernet_controller.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/xmii_handler.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/ethernet_controller_wrapper.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/reset_mgr.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/hdl/ethernet_interface.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/febit.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/filter_data_out.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/front_end.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/icmp_ping_checksum_calc.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/icmp_ping_shift_reg.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/ip_checksum_calc.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/or33.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/outputlogic_crc16.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_defs.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_acmd_rx.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_synchro.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_adjust.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_chklock.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_cksum.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_code8b10bpkg.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_dec8b10b.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_del.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_enc8b10b.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_ep_startup.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_rx_div_mmcm.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_rx_phy.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_rx.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_tstamp.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_prio_enc.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_scmd_merge.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_idle_gen.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_tx.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_tx_phy.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_endpoint.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_endpoint_stdlogic.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/resets.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/spi/spi.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/spy/spy.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/udp_data_splicer.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/user_addrs_mux.vhd
-  /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/daphne2.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/daphne2_package.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/front_end/AFE_self_trigger.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/hdl/params_package.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/address_container.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/arp_reply.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/front_end/auto_afe.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/front_end/auto_fsm.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/data_manager/burst_controller_sm.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/hdl/burst_traffic_controller.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/core/core.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/core/crc20_update.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/crc_splice.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/create_packet.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/fifo.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/data_manager/rx_ctl.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/data_manager/ram_comm_dec.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/data_manager/tx_seq_ctl.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/data_manager/data_manager.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/dataout_mux.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/decipherer.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/front_end/dsp_slice.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/core/stream/dstr4.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/endpoint.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/ethernet_controller.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/xmii_handler.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/ethernet_controller_wrapper.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/reset_mgr.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/hdl/ethernet_interface.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/front_end/febit.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/filter_data_out.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/front_end/front_end.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/icmp_ping_checksum_calc.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/icmp_ping_shift_reg.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/ip_checksum_calc.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/or33.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/outputlogic_crc16.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_defs.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_acmd_rx.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_synchro.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_adjust.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_chklock.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_cksum.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_code8b10bpkg.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_dec8b10b.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_del.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_enc8b10b.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_ep_startup.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_rx_div_mmcm.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_rx_phy.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_rx.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_tstamp.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_prio_enc.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_scmd_merge.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_idle_gen.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_tx.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_tx_phy.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_endpoint.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/ep_src/pdts_endpoint_stdlogic.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/timing/resets.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/spi/spi.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/spy/spy.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/udp_data_splicer.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/oei/ethernet_controller/user_addrs_mux.vhd
+  C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/daphne2.vhd
 }
-read_ip -quiet /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/ip/daphne2_daq_txonly/daphne2_daq_txonly.xci
-set_property used_in_synthesis false [get_files -all /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/ip/daphne2_daq_txonly/daphne2_daq_txonly/example_design/daphne2_daq_txonly_exdes.xdc]
-set_property used_in_implementation false [get_files -all /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/ip/daphne2_daq_txonly/daphne2_daq_txonly/example_design/daphne2_daq_txonly_exdes.xdc]
-set_property used_in_implementation false [get_files -all /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/ip/daphne2_daq_txonly/daphne2_daq_txonly.xdc]
-set_property used_in_implementation false [get_files -all /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/ip/daphne2_daq_txonly/daphne2_daq_txonly_ooc.xdc]
+read_ip -quiet C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/ip/daphne2_daq_txonly/daphne2_daq_txonly.xci
+set_property used_in_synthesis false [get_files -all c:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/ip/daphne2_daq_txonly/daphne2_daq_txonly/example_design/daphne2_daq_txonly_exdes.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/ip/daphne2_daq_txonly/daphne2_daq_txonly/example_design/daphne2_daq_txonly_exdes.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/ip/daphne2_daq_txonly/daphne2_daq_txonly.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/ip/daphne2_daq_txonly/daphne2_daq_txonly_ooc.xdc]
 
-read_ip -quiet /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
-set_property used_in_implementation false [get_files -all /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0.xdc]
-set_property used_in_implementation false [get_files -all /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_ooc.xdc]
+read_ip -quiet C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -184,8 +180,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/xilinx/constraints.xdc
-set_property used_in_implementation false [get_files /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/xilinx/constraints.xdc]
+read_xdc C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/xilinx/constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/xilinx/constraints.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
