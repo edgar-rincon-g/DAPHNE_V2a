@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # Vivado v2022.2 (64-bit)
-# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed Jun 14 08:58:43 2023
-# Process ID: 8101
-# Current directory: /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/impl_1
-# Command line: vivado -log DAPHNE2.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source DAPHNE2.tcl -notrace
-# Log file: /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/impl_1/DAPHNE2.vdi
-# Journal file: /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/impl_1/vivado.jou
-# Running On: Edgar-Rincon, OS: Linux, CPU Frequency: 2700.000 MHz, CPU Physical cores: 6, Host memory: 33250 MB
+# Start of session at: Wed Jun 14 13:22:30 2023
+# Process ID: 13608
+# Current directory: C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/project_1.runs/impl_1
+# Command line: vivado.exe -log DAPHNE2.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source DAPHNE2.tcl -notrace
+# Log file: C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/project_1.runs/impl_1/DAPHNE2.vdi
+# Journal file: C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/project_1.runs/impl_1\vivado.jou
+# Running On: DANIELAVILA, OS: Windows, CPU Frequency: 3592 MHz, CPU Physical cores: 4, Host memory: 17099 MB
 #-----------------------------------------------------------
 source DAPHNE2.tcl -notrace

@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/impl_1/DAPHNE2.tcl"
+  variable script "C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/project_1.runs/impl_1/DAPHNE2.tcl"
   variable category "vivado_impl"
 }
 
@@ -123,25 +123,25 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 3
+  set_param chipscope.maxJobs 2
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a200tfbg676-3
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.cache/wt [current_project]
-  set_property parent.project_path /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.xpr [current_project]
-  set_property ip_output_repo /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/project_1.cache/wt [current_project]
+  set_property parent.project_path C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/project_1.xpr [current_project]
+  set_property ip_output_repo C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/project_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/DAPHNE2.dcp
-  read_ip -quiet /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/ip/daphne2_daq_txonly/daphne2_daq_txonly.xci
-  read_ip -quiet /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+  add_files -quiet C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/project_1.runs/synth_1/DAPHNE2.dcp
+  read_ip -quiet C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/ip/daphne2_daq_txonly/daphne2_daq_txonly.xci
+  read_ip -quiet C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/xilinx/constraints.xdc
+  read_xdc C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/xilinx/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

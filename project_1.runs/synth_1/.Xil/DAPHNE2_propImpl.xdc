@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/xilinx/constraints.xdc rfile:../../../xilinx/constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/daniel.avila/Documents/GitHub/DAPHNE_V2a/xilinx/constraints.xdc rfile:../../../xilinx/constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:27 export:INPUT save:INPUT read:READ} [current_design]
 create_generated_clock -name oeiclk [get_pins phy_inst/U0/core_clocking_i/mmcm_adv_inst/CLKOUT0]
 set_property src_info {type:XDC file:1 line:28 export:INPUT save:INPUT read:READ} [current_design]
