@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Wed Jun 14 13:33:19 2023
-| Host             : DANIELAVILA running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date             : Fri Jun 16 11:52:09 2023
+| Host             : Edgar-Rincon running 64-bit Ubuntu 21.04
 | Command          : report_power -file DAPHNE2_power_routed.rpt -pb DAPHNE2_power_summary_routed.pb -rpx DAPHNE2_power_routed.rpx
 | Design           : DAPHNE2
 | Device           : xc7a200tfbg676-3
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.927        |
+| Total On-Chip Power (W)  | 2.908        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.753        |
+| Dynamic (W)              | 2.734        |
 | Device Static (W)        | 0.174        |
 | Effective TJA (C/W)      | 1.9          |
-| Max Ambient (C)          | 94.5         |
-| Junction Temperature (C) | 30.5         |
+| Max Ambient (C)          | 94.6         |
+| Junction Temperature (C) | 30.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,22 +52,22 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.146 |       38 |       --- |             --- |
-| Slice Logic             |     0.047 |    28459 |       --- |             --- |
-|   LUT as Logic          |     0.028 |     6098 |    133800 |            4.56 |
-|   LUT as Shift Register |     0.011 |     2609 |     46200 |            5.65 |
-|   Register              |     0.007 |    15711 |    269200 |            5.84 |
-|   CARRY4                |     0.001 |      659 |     33450 |            1.97 |
+| Clocks                  |     0.153 |       38 |       --- |             --- |
+| Slice Logic             |     0.048 |    30439 |       --- |             --- |
+|   LUT as Logic          |     0.032 |     6262 |    133800 |            4.68 |
+|   LUT as Shift Register |     0.008 |     2609 |     46200 |            5.65 |
+|   Register              |     0.007 |    17450 |    269200 |            6.48 |
+|   CARRY4                |     0.001 |      539 |     33450 |            1.61 |
 |   F7/F8 Muxes           |    <0.001 |      278 |    133800 |            0.21 |
 |   Others                |    <0.001 |     1516 |       --- |             --- |
-| Signals                 |     0.152 |    62910 |       --- |             --- |
-| Block RAM               |     0.184 |    130.5 |       365 |           35.75 |
+| Signals                 |     0.159 |    63019 |       --- |             --- |
+| Block RAM               |     0.179 |    130.5 |       365 |           35.75 |
 | MMCM                    |     0.528 |        5 |        10 |           50.00 |
-| DSPs                    |     0.429 |      680 |       740 |           91.89 |
+| DSPs                    |     0.400 |      680 |       740 |           91.89 |
 | I/O                     |     0.749 |      143 |       400 |           35.75 |
 | GTP                     |     0.519 |        5 |       --- |             --- |
 | Static Power            |     0.174 |          |           |                 |
-| Total                   |     2.927 |          |           |                 |
+| Total                   |     2.908 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     1.114 |       1.073 |      0.041 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     1.095 |       1.054 |      0.041 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.589 |       0.558 |      0.031 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.007 |       0.002 |      0.005 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.094 |       0.089 |      0.005 |       NA    | Unspecified | NA         |
@@ -169,13 +169,13 @@ Table of Contents
 +---------------------------------------------+-----------+
 | Name                                        | Power (W) |
 +---------------------------------------------+-----------+
-| DAPHNE2                                     |     2.753 |
+| DAPHNE2                                     |     2.734 |
 |   BRAM0_inst                                |     0.003 |
-|   core_inst                                 |     0.580 |
-|     daq_quad_inst                           |     0.509 |
-|       U0                                    |     0.509 |
-|     sender0_inst                            |     0.015 |
-|       crc_inst                              |     0.005 |
+|   core_inst                                 |     0.585 |
+|     daq_quad_inst                           |     0.508 |
+|       U0                                    |     0.508 |
+|     sender0_inst                            |     0.016 |
+|       crc_inst                              |     0.006 |
 |     sender0_spy_hi_inst                     |     0.006 |
 |       genbuffer[0].ramb_inst                |     0.001 |
 |       genbuffer[1].ramb_inst                |     0.001 |
@@ -186,30 +186,29 @@ Table of Contents
 |       genbuffer[1].ramb_inst                |     0.001 |
 |       genbuffer[2].ramb_inst                |     0.001 |
 |       genbuffer[3].ramb_inst                |     0.001 |
-|     sender1_inst                            |     0.015 |
-|       crc_inst                              |     0.005 |
-|     sender2_inst                            |     0.014 |
-|       crc_inst                              |     0.005 |
-|     sender3_inst                            |     0.015 |
+|     sender1_inst                            |     0.017 |
+|       crc_inst                              |     0.007 |
+|     sender2_inst                            |     0.015 |
 |       crc_inst                              |     0.006 |
-|   endpoint_inst                             |     0.409 |
-|     pdts_endpoint_inst                      |     0.142 |
-|       ep                                    |     0.142 |
-|   eth_int_inst                              |     0.054 |
-|     data_manager_blk                        |     0.035 |
-|       GEC_RX_CTRL                           |     0.001 |
+|     sender3_inst                            |     0.016 |
+|       crc_inst                              |     0.007 |
+|   endpoint_inst                             |     0.408 |
+|     pdts_endpoint_inst                      |     0.140 |
+|       ep                                    |     0.140 |
+|   eth_int_inst                              |     0.055 |
+|     data_manager_blk                        |     0.036 |
+|       GEC_RX_CTRL                           |     0.002 |
 |       GEC_TX_SEQ_CTL                        |     0.002 |
-|       RAM_COMM_DEC                          |     0.008 |
-|       RX_DATA_FIFO                          |     0.007 |
+|       RAM_COMM_DEC                          |     0.012 |
+|       RX_DATA_FIFO                          |     0.008 |
 |       RX_SRC_ADDR_FIFO                      |     0.002 |
 |       RX_SRC_MAC_FIFO                       |     0.002 |
-|       TX_CTRL_ADDR_FIFO                     |     0.003 |
+|       TX_CTRL_ADDR_FIFO                     |     0.002 |
 |       TX_CTRL_FIFO                          |     0.004 |
-|       TX_CTRL_INFO_FIFO                     |     0.001 |
-|       TX_CTRL_MAC_FIFO                      |     0.003 |
+|       TX_CTRL_MAC_FIFO                      |     0.002 |
 |     ec_wrapper                              |     0.016 |
 |       ethernet_controller                   |     0.015 |
-|   fe_inst                                   |     1.281 |
+|   fe_inst                                   |     1.262 |
 |     gen_afe[0].afe_inst                     |     0.132 |
 |       ffebit_inst                           |     0.015 |
 |       genfebit[0].dfebit_inst               |     0.015 |
@@ -260,75 +259,7 @@ Table of Contents
 |       genfebit[5].dfebit_inst               |     0.015 |
 |       genfebit[6].dfebit_inst               |     0.015 |
 |       genfebit[7].dfebit_inst               |     0.015 |
-|     gen_self_trigger[0].self_trigger_inst   |     0.116 |
-|       gen_hpf[0].hpf_inst                   |     0.002 |
-|       gen_hpf[1].hpf_inst                   |     0.002 |
-|       gen_hpf[2].hpf_inst                   |     0.002 |
-|       gen_hpf[3].hpf_inst                   |     0.002 |
-|       gen_hpf[4].hpf_inst                   |     0.002 |
-|       gen_hpf[5].hpf_inst                   |     0.002 |
-|       gen_hpf[6].hpf_inst                   |     0.002 |
-|       gen_hpf[7].hpf_inst                   |     0.002 |
-|       gen_self_trigger[0].self_trigger_inst |     0.013 |
-|       gen_self_trigger[1].self_trigger_inst |     0.013 |
-|       gen_self_trigger[2].self_trigger_inst |     0.013 |
-|       gen_self_trigger[3].self_trigger_inst |     0.013 |
-|       gen_self_trigger[4].self_trigger_inst |     0.012 |
-|       gen_self_trigger[5].self_trigger_inst |     0.012 |
-|       gen_self_trigger[6].self_trigger_inst |     0.012 |
-|       gen_self_trigger[7].self_trigger_inst |     0.013 |
-|     gen_self_trigger[1].self_trigger_inst   |     0.117 |
-|       gen_hpf[0].hpf_inst                   |     0.002 |
-|       gen_hpf[1].hpf_inst                   |     0.002 |
-|       gen_hpf[2].hpf_inst                   |     0.002 |
-|       gen_hpf[3].hpf_inst                   |     0.002 |
-|       gen_hpf[4].hpf_inst                   |     0.002 |
-|       gen_hpf[5].hpf_inst                   |     0.002 |
-|       gen_hpf[6].hpf_inst                   |     0.002 |
-|       gen_hpf[7].hpf_inst                   |     0.002 |
-|       gen_self_trigger[0].self_trigger_inst |     0.013 |
-|       gen_self_trigger[1].self_trigger_inst |     0.013 |
-|       gen_self_trigger[2].self_trigger_inst |     0.014 |
-|       gen_self_trigger[3].self_trigger_inst |     0.013 |
-|       gen_self_trigger[4].self_trigger_inst |     0.012 |
-|       gen_self_trigger[5].self_trigger_inst |     0.012 |
-|       gen_self_trigger[6].self_trigger_inst |     0.012 |
-|       gen_self_trigger[7].self_trigger_inst |     0.013 |
-|     gen_self_trigger[2].self_trigger_inst   |     0.118 |
-|       gen_hpf[0].hpf_inst                   |     0.002 |
-|       gen_hpf[1].hpf_inst                   |     0.002 |
-|       gen_hpf[2].hpf_inst                   |     0.002 |
-|       gen_hpf[3].hpf_inst                   |     0.002 |
-|       gen_hpf[4].hpf_inst                   |     0.002 |
-|       gen_hpf[5].hpf_inst                   |     0.002 |
-|       gen_hpf[6].hpf_inst                   |     0.002 |
-|       gen_hpf[7].hpf_inst                   |     0.002 |
-|       gen_self_trigger[0].self_trigger_inst |     0.013 |
-|       gen_self_trigger[1].self_trigger_inst |     0.014 |
-|       gen_self_trigger[2].self_trigger_inst |     0.013 |
-|       gen_self_trigger[3].self_trigger_inst |     0.013 |
-|       gen_self_trigger[4].self_trigger_inst |     0.013 |
-|       gen_self_trigger[5].self_trigger_inst |     0.012 |
-|       gen_self_trigger[6].self_trigger_inst |     0.012 |
-|       gen_self_trigger[7].self_trigger_inst |     0.012 |
-|     gen_self_trigger[3].self_trigger_inst   |     0.115 |
-|       gen_hpf[0].hpf_inst                   |     0.002 |
-|       gen_hpf[1].hpf_inst                   |     0.002 |
-|       gen_hpf[2].hpf_inst                   |     0.002 |
-|       gen_hpf[3].hpf_inst                   |     0.002 |
-|       gen_hpf[4].hpf_inst                   |     0.002 |
-|       gen_hpf[5].hpf_inst                   |     0.002 |
-|       gen_hpf[6].hpf_inst                   |     0.002 |
-|       gen_hpf[7].hpf_inst                   |     0.002 |
-|       gen_self_trigger[0].self_trigger_inst |     0.013 |
-|       gen_self_trigger[1].self_trigger_inst |     0.013 |
-|       gen_self_trigger[2].self_trigger_inst |     0.013 |
-|       gen_self_trigger[3].self_trigger_inst |     0.013 |
-|       gen_self_trigger[4].self_trigger_inst |     0.012 |
-|       gen_self_trigger[5].self_trigger_inst |     0.012 |
-|       gen_self_trigger[6].self_trigger_inst |     0.012 |
-|       gen_self_trigger[7].self_trigger_inst |     0.012 |
-|     gen_self_trigger[4].self_trigger_inst   |     0.117 |
+|     gen_self_trigger[0].self_trigger_inst   |     0.110 |
 |       gen_hpf[0].hpf_inst                   |     0.002 |
 |       gen_hpf[1].hpf_inst                   |     0.002 |
 |       gen_hpf[2].hpf_inst                   |     0.002 |
@@ -338,9 +269,77 @@ Table of Contents
 |       gen_hpf[6].hpf_inst                   |     0.002 |
 |       gen_hpf[7].hpf_inst                   |     0.002 |
 |       gen_self_trigger[0].self_trigger_inst |     0.012 |
-|       gen_self_trigger[1].self_trigger_inst |     0.015 |
+|       gen_self_trigger[1].self_trigger_inst |     0.012 |
+|       gen_self_trigger[2].self_trigger_inst |     0.012 |
+|       gen_self_trigger[3].self_trigger_inst |     0.012 |
+|       gen_self_trigger[4].self_trigger_inst |     0.011 |
+|       gen_self_trigger[5].self_trigger_inst |     0.012 |
+|       gen_self_trigger[6].self_trigger_inst |     0.012 |
+|       gen_self_trigger[7].self_trigger_inst |     0.012 |
+|     gen_self_trigger[1].self_trigger_inst   |     0.114 |
+|       gen_hpf[0].hpf_inst                   |     0.002 |
+|       gen_hpf[1].hpf_inst                   |     0.002 |
+|       gen_hpf[2].hpf_inst                   |     0.002 |
+|       gen_hpf[3].hpf_inst                   |     0.002 |
+|       gen_hpf[4].hpf_inst                   |     0.002 |
+|       gen_hpf[5].hpf_inst                   |     0.002 |
+|       gen_hpf[6].hpf_inst                   |     0.002 |
+|       gen_hpf[7].hpf_inst                   |     0.002 |
+|       gen_self_trigger[0].self_trigger_inst |     0.013 |
+|       gen_self_trigger[1].self_trigger_inst |     0.012 |
 |       gen_self_trigger[2].self_trigger_inst |     0.013 |
+|       gen_self_trigger[3].self_trigger_inst |     0.012 |
+|       gen_self_trigger[4].self_trigger_inst |     0.012 |
+|       gen_self_trigger[5].self_trigger_inst |     0.012 |
+|       gen_self_trigger[6].self_trigger_inst |     0.012 |
+|       gen_self_trigger[7].self_trigger_inst |     0.012 |
+|     gen_self_trigger[2].self_trigger_inst   |     0.111 |
+|       gen_hpf[0].hpf_inst                   |     0.002 |
+|       gen_hpf[1].hpf_inst                   |     0.002 |
+|       gen_hpf[2].hpf_inst                   |     0.002 |
+|       gen_hpf[3].hpf_inst                   |     0.002 |
+|       gen_hpf[4].hpf_inst                   |     0.002 |
+|       gen_hpf[5].hpf_inst                   |     0.002 |
+|       gen_hpf[6].hpf_inst                   |     0.002 |
+|       gen_hpf[7].hpf_inst                   |     0.002 |
+|       gen_self_trigger[0].self_trigger_inst |     0.012 |
+|       gen_self_trigger[1].self_trigger_inst |     0.012 |
+|       gen_self_trigger[2].self_trigger_inst |     0.012 |
+|       gen_self_trigger[3].self_trigger_inst |     0.012 |
+|       gen_self_trigger[4].self_trigger_inst |     0.011 |
+|       gen_self_trigger[5].self_trigger_inst |     0.012 |
+|       gen_self_trigger[6].self_trigger_inst |     0.012 |
+|       gen_self_trigger[7].self_trigger_inst |     0.012 |
+|     gen_self_trigger[3].self_trigger_inst   |     0.114 |
+|       gen_hpf[0].hpf_inst                   |     0.002 |
+|       gen_hpf[1].hpf_inst                   |     0.002 |
+|       gen_hpf[2].hpf_inst                   |     0.002 |
+|       gen_hpf[3].hpf_inst                   |     0.002 |
+|       gen_hpf[4].hpf_inst                   |     0.002 |
+|       gen_hpf[5].hpf_inst                   |     0.002 |
+|       gen_hpf[6].hpf_inst                   |     0.002 |
+|       gen_hpf[7].hpf_inst                   |     0.002 |
+|       gen_self_trigger[0].self_trigger_inst |     0.012 |
+|       gen_self_trigger[1].self_trigger_inst |     0.013 |
+|       gen_self_trigger[2].self_trigger_inst |     0.012 |
 |       gen_self_trigger[3].self_trigger_inst |     0.013 |
+|       gen_self_trigger[4].self_trigger_inst |     0.012 |
+|       gen_self_trigger[5].self_trigger_inst |     0.013 |
+|       gen_self_trigger[6].self_trigger_inst |     0.012 |
+|       gen_self_trigger[7].self_trigger_inst |     0.012 |
+|     gen_self_trigger[4].self_trigger_inst   |     0.112 |
+|       gen_hpf[0].hpf_inst                   |     0.002 |
+|       gen_hpf[1].hpf_inst                   |     0.002 |
+|       gen_hpf[2].hpf_inst                   |     0.002 |
+|       gen_hpf[3].hpf_inst                   |     0.002 |
+|       gen_hpf[4].hpf_inst                   |     0.002 |
+|       gen_hpf[5].hpf_inst                   |     0.002 |
+|       gen_hpf[6].hpf_inst                   |     0.003 |
+|       gen_hpf[7].hpf_inst                   |     0.002 |
+|       gen_self_trigger[0].self_trigger_inst |     0.012 |
+|       gen_self_trigger[1].self_trigger_inst |     0.012 |
+|       gen_self_trigger[2].self_trigger_inst |     0.012 |
+|       gen_self_trigger[3].self_trigger_inst |     0.011 |
 |       gen_self_trigger[4].self_trigger_inst |     0.012 |
 |       gen_self_trigger[5].self_trigger_inst |     0.012 |
 |       gen_self_trigger[6].self_trigger_inst |     0.013 |
@@ -354,12 +353,10 @@ Table of Contents
 |     genbuffer[0].ramb_inst                  |     0.001 |
 |     genbuffer[1].ramb_inst                  |     0.001 |
 |     genbuffer[2].ramb_inst                  |     0.001 |
-|     genbuffer[3].ramb_inst                  |     0.001 |
 |   gen_spy_afe[0].gen_spy_bit[2].spy_inst    |     0.005 |
 |     genbuffer[0].ramb_inst                  |     0.001 |
 |     genbuffer[1].ramb_inst                  |     0.001 |
 |     genbuffer[2].ramb_inst                  |     0.001 |
-|     genbuffer[3].ramb_inst                  |     0.001 |
 |   gen_spy_afe[0].gen_spy_bit[3].spy_inst    |     0.005 |
 |     genbuffer[0].ramb_inst                  |     0.001 |
 |     genbuffer[1].ramb_inst                  |     0.001 |
@@ -369,17 +366,14 @@ Table of Contents
 |     genbuffer[0].ramb_inst                  |     0.001 |
 |     genbuffer[1].ramb_inst                  |     0.001 |
 |     genbuffer[2].ramb_inst                  |     0.001 |
-|     genbuffer[3].ramb_inst                  |     0.001 |
 |   gen_spy_afe[0].gen_spy_bit[5].spy_inst    |     0.005 |
 |     genbuffer[0].ramb_inst                  |     0.001 |
 |     genbuffer[1].ramb_inst                  |     0.001 |
 |     genbuffer[2].ramb_inst                  |     0.001 |
-|     genbuffer[3].ramb_inst                  |     0.001 |
 |   gen_spy_afe[0].gen_spy_bit[6].spy_inst    |     0.005 |
 |     genbuffer[0].ramb_inst                  |     0.001 |
 |     genbuffer[1].ramb_inst                  |     0.001 |
 |     genbuffer[2].ramb_inst                  |     0.001 |
-|     genbuffer[3].ramb_inst                  |     0.001 |
 |   gen_spy_afe[0].gen_spy_bit[7].spy_inst    |     0.005 |
 |     genbuffer[0].ramb_inst                  |     0.001 |
 |     genbuffer[1].ramb_inst                  |     0.001 |
@@ -394,7 +388,7 @@ Table of Contents
 |   gen_spy_afe[1].gen_spy_bit[5].spy_inst    |     0.003 |
 |   gen_spy_afe[1].gen_spy_bit[6].spy_inst    |     0.003 |
 |   gen_spy_afe[1].gen_spy_bit[7].spy_inst    |     0.003 |
-|   gen_spy_afe[1].gen_spy_bit[8].spy_inst    |     0.002 |
+|   gen_spy_afe[1].gen_spy_bit[8].spy_inst    |     0.003 |
 |   gen_spy_afe[2].gen_spy_bit[0].spy_inst    |     0.003 |
 |   gen_spy_afe[2].gen_spy_bit[1].spy_inst    |     0.003 |
 |   gen_spy_afe[2].gen_spy_bit[2].spy_inst    |     0.003 |
@@ -403,7 +397,7 @@ Table of Contents
 |   gen_spy_afe[2].gen_spy_bit[5].spy_inst    |     0.003 |
 |   gen_spy_afe[2].gen_spy_bit[6].spy_inst    |     0.003 |
 |   gen_spy_afe[2].gen_spy_bit[7].spy_inst    |     0.003 |
-|   gen_spy_afe[2].gen_spy_bit[8].spy_inst    |     0.002 |
+|   gen_spy_afe[2].gen_spy_bit[8].spy_inst    |     0.003 |
 |   gen_spy_afe[3].gen_spy_bit[0].spy_inst    |     0.003 |
 |   gen_spy_afe[3].gen_spy_bit[1].spy_inst    |     0.003 |
 |   gen_spy_afe[3].gen_spy_bit[2].spy_inst    |     0.003 |
@@ -422,10 +416,11 @@ Table of Contents
 |   gen_spy_afe[4].gen_spy_bit[6].spy_inst    |     0.003 |
 |   gen_spy_afe[4].gen_spy_bit[7].spy_inst    |     0.003 |
 |   gen_spy_afe[4].gen_spy_bit[8].spy_inst    |     0.003 |
-|   phy_inst                                  |     0.245 |
-|     U0                                      |     0.245 |
+|   phy_inst                                  |     0.244 |
+|     U0                                      |     0.244 |
 |       core_clocking_i                       |     0.107 |
-|       pcs_pma_block_i                       |     0.137 |
+|       pcs_pma_block_i                       |     0.136 |
+|   reset_inst                                |     0.001 |
 |   ts_spy_gen[0].ts_spy_inst                 |     0.003 |
 |   ts_spy_gen[1].ts_spy_inst                 |     0.003 |
 |   ts_spy_gen[2].ts_spy_inst                 |     0.003 |

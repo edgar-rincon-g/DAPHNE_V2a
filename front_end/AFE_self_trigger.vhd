@@ -53,6 +53,7 @@ architecture Behavioral of AFE_self_trigger is
         );
         port(
             clk  : in  std_logic;
+            rst : in std_logic;
             i_data  : in  std_logic_vector(g_INPUT_WIDTH - 1 downto 0);
             o_data : out std_logic_vector(g_SUM_WIDTH - 1 downto 0);
             o_trigger : out std_logic
@@ -92,6 +93,7 @@ begin
         self_trigger_inst: self_trigger
             port map(
                 clk  => clk,
+                rst => rst,
                 i_data => data_hpf(i),
                 o_data => o_data(i),
                 o_trigger => o_trigger(i)
