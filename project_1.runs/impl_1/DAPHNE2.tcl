@@ -115,8 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {Common 17-55}  -new_severity {WARNING} 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
@@ -126,8 +124,6 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 3
-  set_param checkpoint.writeSynthRtdsInDcp 1
-  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-4375-Edgar-Rincon/incrSyn
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a200tfbg676-3
   set_property design_mode GateLvl [current_fileset]

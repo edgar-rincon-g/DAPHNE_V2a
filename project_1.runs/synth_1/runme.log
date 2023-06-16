@@ -28,12 +28,12 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200
 INFO: [Device 21-403] Loading part xc7a200tfbg676-3
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 62650
+INFO: [Synth 8-7075] Helper process launched with PID 7517
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2022.324 ; gain = 369.801 ; free physical = 17465 ; free virtual = 25125
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1452.117; parent = 1240.001; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3055.469; parent = 2028.266; children = 1027.203
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2022.383 ; gain = 369.801 ; free physical = 21101 ; free virtual = 27017
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1454.038; parent = 1242.511; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3055.523; parent = 2028.324; children = 1027.199
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'DAPHNE2' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/daphne2.vhd:110]
 INFO: [Synth 8-3491] module 'resets' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/resets.vhd:15' bound to instance 'reset_inst' of component 'resets' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/daphne2.vhd:365]
@@ -197,36 +197,23 @@ INFO: [Synth 8-113] binding component instance 'ODDR_inst' to cell 'ODDR' [/home
 INFO: [Synth 8-113] binding component instance 'OBUFDS_inst' to cell 'OBUFDS' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/front_end.vhd:105]
 INFO: [Synth 8-3491] module 'AFE_self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:36' bound to instance 'self_trigger_inst' of component 'AFE_self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/front_end.vhd:130]
 INFO: [Synth 8-638] synthesizing module 'AFE_self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:46]
-INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:81]
+INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:82]
 INFO: [Synth 8-638] synthesizing module 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:51]
 	Parameter Data_Size bound to: 14 - type: integer 
-	Parameter Coefficient_Resolution bound to: 16 - type: integer 
-	Parameter A_Input bound to: DIRECT - type: string 
-	Parameter B_Input bound to: DIRECT - type: string 
+	Parameter Coefficient_Resolution bound to: 17 - type: integer 
 	Parameter Use_Dport bound to: 1 - type: bool 
-	Parameter Use_Mult bound to: MULTIPLY - type: string 
-	Parameter Use_SIMD bound to: ONE48 - type: string 
-	Parameter AutoRst_PatDet bound to: NO_RESET - type: string 
-	Parameter Mask bound to: 48'b001111111111111111111111111111111111111111111111 
-	Parameter Pattern bound to: 48'b000000000000000000000000000000000000000000000000 
-	Parameter Sel_Mask bound to: MASK - type: string 
-	Parameter Sel_Pattern bound to: PATTERN - type: string 
-	Parameter Use_Pattern_Det bound to: NO_PATDET - type: string 
-	Parameter AReg bound to: 1 - type: integer 
 	Parameter BReg bound to: 0 - type: integer 
-	Parameter CReg bound to: 1 - type: integer 
 	Parameter DReg bound to: 0 - type: integer 
 	Parameter ADReg bound to: 0 - type: integer 
 	Parameter MReg bound to: 0 - type: integer 
 	Parameter PReg bound to: 0 - type: integer 
-	Parameter ACascReg bound to: 1 - type: integer 
 	Parameter BCascReg bound to: 0 - type: integer 
 	Parameter ALUModeReg bound to: 0 - type: integer 
 	Parameter CarryInReg bound to: 0 - type: integer 
 	Parameter CarryInSelReg bound to: 0 - type: integer 
 	Parameter InModeReg bound to: 0 - type: integer 
 	Parameter OPModeReg bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'dsp_slice' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/dsp_slice.vhd:35' bound to instance 'fir_forward' of component 'dsp_slice' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:143]
+INFO: [Synth 8-3491] module 'dsp_slice' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/dsp_slice.vhd:35' bound to instance 'fir_forward' of component 'dsp_slice' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:146]
 INFO: [Synth 8-638] synthesizing module 'dsp_slice' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/dsp_slice.vhd:84]
 	Parameter A_Input bound to: DIRECT - type: string 
 	Parameter B_Input bound to: DIRECT - type: string 
@@ -280,21 +267,8 @@ INFO: [Synth 8-638] synthesizing module 'dsp_slice' [/home/edgar/Documentos/DUNE
 	Parameter USE_SIMD bound to: ONE48 - type: string 
 INFO: [Synth 8-113] binding component instance 'DSP48E1_inst' to cell 'DSP48E1' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/dsp_slice.vhd:87]
 INFO: [Synth 8-256] done synthesizing module 'dsp_slice' (0#1) [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/dsp_slice.vhd:84]
-	Parameter A_Input bound to: DIRECT - type: string 
-	Parameter B_Input bound to: DIRECT - type: string 
-	Parameter Use_Dport bound to: 0 - type: bool 
-	Parameter Use_Mult bound to: MULTIPLY - type: string 
-	Parameter Use_SIMD bound to: ONE48 - type: string 
-	Parameter AutoRst_PatDet bound to: NO_RESET - type: string 
-	Parameter Mask bound to: 48'b001111111111111111111111111111111111111111111111 
-	Parameter Pattern bound to: 48'b000000000000000000000000000000000000000000000000 
-	Parameter Sel_Mask bound to: MASK - type: string 
-	Parameter Sel_Pattern bound to: PATTERN - type: string 
-	Parameter Use_Pattern_Det bound to: NO_PATDET - type: string 
 	Parameter AReg bound to: 0 - type: integer 
 	Parameter BReg bound to: 0 - type: integer 
-	Parameter CReg bound to: 1 - type: integer 
-	Parameter DReg bound to: 1 - type: integer 
 	Parameter ADReg bound to: 0 - type: integer 
 	Parameter MReg bound to: 0 - type: integer 
 	Parameter PReg bound to: 0 - type: integer 
@@ -305,7 +279,7 @@ INFO: [Synth 8-256] done synthesizing module 'dsp_slice' (0#1) [/home/edgar/Docu
 	Parameter CarryInSelReg bound to: 0 - type: integer 
 	Parameter InModeReg bound to: 0 - type: integer 
 	Parameter OPModeReg bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'dsp_slice' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/dsp_slice.vhd:35' bound to instance 'fir_feedback' of component 'dsp_slice' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:233]
+INFO: [Synth 8-3491] module 'dsp_slice' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/dsp_slice.vhd:35' bound to instance 'fir_feedback' of component 'dsp_slice' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:223]
 INFO: [Synth 8-638] synthesizing module 'dsp_slice__parameterized1' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/dsp_slice.vhd:84]
 	Parameter A_Input bound to: DIRECT - type: string 
 	Parameter B_Input bound to: DIRECT - type: string 
@@ -360,26 +334,26 @@ INFO: [Synth 8-638] synthesizing module 'dsp_slice__parameterized1' [/home/edgar
 INFO: [Synth 8-113] binding component instance 'DSP48E1_inst' to cell 'DSP48E1' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/dsp_slice.vhd:87]
 INFO: [Synth 8-256] done synthesizing module 'dsp_slice__parameterized1' (0#1) [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/dsp_slice.vhd:84]
 INFO: [Synth 8-256] done synthesizing module 'highPass_FirstOrder' (0#1) [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:51]
-INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:81]
-INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:81]
-INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:81]
-INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:81]
-INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:81]
-INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:81]
-INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:81]
-INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:92]
-INFO: [Synth 8-638] synthesizing module 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:61]
+INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:82]
+INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:82]
+INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:82]
+INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:82]
+INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:82]
+INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:82]
+INFO: [Synth 8-3491] module 'highPass_FirstOrder' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/highPass_FirstOrder.vhd:38' bound to instance 'hpf_inst' of component 'highPass_FirstOrder' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:82]
+INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:62]
 	Parameter g_INPUT_WIDTH bound to: 14 - type: integer 
 	Parameter g_SUM_WIDTH bound to: 14 - type: integer 
 	Parameter g_MULT_WIDTH bound to: 28 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'self_trigger' (0#1) [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:61]
-INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:92]
-INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:92]
-INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:92]
-INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:92]
-INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:92]
-INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:92]
-INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'self_trigger' (0#1) [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:62]
+INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:93]
+INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:93]
+INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:93]
+INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:93]
+INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:93]
+INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:93]
+INFO: [Synth 8-3491] module 'self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:47' bound to instance 'self_trigger_inst' of component 'self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:93]
 INFO: [Synth 8-256] done synthesizing module 'AFE_self_trigger' (0#1) [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:46]
 INFO: [Synth 8-3491] module 'AFE_self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:36' bound to instance 'self_trigger_inst' of component 'AFE_self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/front_end.vhd:130]
 INFO: [Synth 8-3491] module 'AFE_self_trigger' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/AFE_self_trigger.vhd:36' bound to instance 'self_trigger_inst' of component 'AFE_self_trigger' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/front_end.vhd:130]
@@ -846,9 +820,9 @@ INFO: [Synth 8-3491] module 'spy' declared at '/home/edgar/Documentos/DUNE/Self_
 INFO: [Synth 8-3491] module 'spy' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/spy/spy.vhd:22' bound to instance 'ts_spy_inst' of component 'spy' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/daphne2.vhd:515]
 INFO: [Synth 8-113] binding component instance 'gbe_refclk_p_ibuf_inst' to cell 'IBUF' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/daphne2.vhd:536]
 INFO: [Synth 8-113] binding component instance 'gbe_refclk_n_ibuf_inst' to cell 'IBUF' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/daphne2.vhd:537]
-INFO: [Synth 8-3491] module 'gig_ethernet_pcs_pma_0' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-62627-Edgar-Rincon/realtime/gig_ethernet_pcs_pma_0_stub.v:5' bound to instance 'phy_inst' of component 'gig_ethernet_pcs_pma_0' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/daphne2.vhd:539]
-INFO: [Synth 8-6157] synthesizing module 'gig_ethernet_pcs_pma_0' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-62627-Edgar-Rincon/realtime/gig_ethernet_pcs_pma_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'gig_ethernet_pcs_pma_0' (0#1) [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-62627-Edgar-Rincon/realtime/gig_ethernet_pcs_pma_0_stub.v:5]
+INFO: [Synth 8-3491] module 'gig_ethernet_pcs_pma_0' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-7485-Edgar-Rincon/realtime/gig_ethernet_pcs_pma_0_stub.v:5' bound to instance 'phy_inst' of component 'gig_ethernet_pcs_pma_0' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/daphne2.vhd:539]
+INFO: [Synth 8-6157] synthesizing module 'gig_ethernet_pcs_pma_0' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-7485-Edgar-Rincon/realtime/gig_ethernet_pcs_pma_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'gig_ethernet_pcs_pma_0' (0#1) [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-7485-Edgar-Rincon/realtime/gig_ethernet_pcs_pma_0_stub.v:5]
 INFO: [Synth 8-3491] module 'ethernet_interface' declared at '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/hdl/ethernet_interface.vhd:25' bound to instance 'eth_int_inst' of component 'ethernet_interface' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/daphne2.vhd:591]
 INFO: [Synth 8-638] synthesizing module 'ethernet_interface' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/hdl/ethernet_interface.vhd:71]
 INFO: [Synth 8-638] synthesizing module 'ethernet_controller_wrapper' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/oei/ethernet_controller/ethernet_controller_wrapper.vhd:71]
@@ -1732,8 +1706,8 @@ INFO: [Synth 8-113] binding component instance 'ts_fifo_inst' to cell 'FIFO36E1'
 	Parameter G_Poly bound to: 20'b10000011010110011111 
 	Parameter G_InitVal bound to: 20'b11111111111111111111 
 INFO: [Synth 8-256] done synthesizing module 'dstr4__parameterized5' (0#1) [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/core/stream/dstr4.vhd:44]
-INFO: [Synth 8-6157] synthesizing module 'daphne2_daq_txonly' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-62627-Edgar-Rincon/realtime/daphne2_daq_txonly_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'daphne2_daq_txonly' (0#1) [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-62627-Edgar-Rincon/realtime/daphne2_daq_txonly_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'daphne2_daq_txonly' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-7485-Edgar-Rincon/realtime/daphne2_daq_txonly_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'daphne2_daq_txonly' (0#1) [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-7485-Edgar-Rincon/realtime/daphne2_daq_txonly_stub.v:5]
 INFO: [Synth 8-256] done synthesizing module 'core' (0#1) [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/core/core.vhd:44]
 INFO: [Synth 8-638] synthesizing module 'spi' [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/spi/spi.vhd:29]
 INFO: [Synth 8-256] done synthesizing module 'spi' (0#1) [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/spi/spi.vhd:29]
@@ -1745,7 +1719,7 @@ INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance '
 WARNING: [Synth 8-6014] Unused sequential element ipa_reg was removed.  [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_scmd_merge.vhd:69]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'txphy'. This will prevent further optimization [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_endpoint.vhd:268]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'enc'. This will prevent further optimization [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/timing/ep_src/pdts_tx_phy.vhd:52]
-WARNING: [Synth 8-6014] Unused sequential element r_pedestal_reg was removed.  [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:343]
+WARNING: [Synth 8-6014] Unused sequential element r_pedestal_reg was removed.  [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/front_end/Self-trigger_VHDL.vhd:408]
 WARNING: [Synth 8-3848] Net dip_pattern in module/entity unimacro_FIFO_SYNC_MACRO does not have driver. [/opt/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhd:589]
 WARNING: [Synth 8-3848] Net dip_pattern in module/entity unimacro_FIFO_SYNC_MACRO__parameterized0 does not have driver. [/opt/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhd:589]
 WARNING: [Synth 8-3848] Net dip_pattern in module/entity unimacro_FIFO_SYNC_MACRO__parameterized1 does not have driver. [/opt/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhd:589]
@@ -1857,34 +1831,34 @@ WARNING: [Synth 8-7129] Port din[4][1][13] in module core is either unconnected 
 WARNING: [Synth 8-7129] Port din[4][1][12] in module core is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2191.230 ; gain = 538.707 ; free physical = 17463 ; free virtual = 25127
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1452.117; parent = 1240.001; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3218.438; parent = 2191.234; children = 1027.203
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2192.289 ; gain = 539.707 ; free physical = 21099 ; free virtual = 27021
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1455.407; parent = 1243.980; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3219.492; parent = 2192.293; children = 1027.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2209.043 ; gain = 556.520 ; free physical = 17465 ; free virtual = 25129
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1452.117; parent = 1240.001; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3236.250; parent = 2209.047; children = 1027.203
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2207.133 ; gain = 554.551 ; free physical = 21101 ; free virtual = 27023
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1455.407; parent = 1243.980; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3234.336; parent = 2207.137; children = 1027.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2209.043 ; gain = 556.520 ; free physical = 17465 ; free virtual = 25129
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1452.117; parent = 1240.001; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3236.250; parent = 2209.047; children = 1027.203
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2207.133 ; gain = 554.551 ; free physical = 21101 ; free virtual = 27023
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1455.407; parent = 1243.980; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3234.336; parent = 2207.137; children = 1027.199
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.5 . Memory (MB): peak = 2212.012 ; gain = 0.000 ; free physical = 17397 ; free virtual = 25062
+Netlist sorting complete. Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.54 . Memory (MB): peak = 2213.070 ; gain = 0.000 ; free physical = 21025 ; free virtual = 26947
 INFO: [Netlist 29-17] Analyzing 518 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-62627-Edgar-Rincon/daphne2_daq_txonly/daphne2_daq_txonly/daphne2_daq_txonly_in_context.xdc] for cell 'core_inst/daq_quad_inst'
-Finished Parsing XDC File [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-62627-Edgar-Rincon/daphne2_daq_txonly/daphne2_daq_txonly/daphne2_daq_txonly_in_context.xdc] for cell 'core_inst/daq_quad_inst'
-Parsing XDC File [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-62627-Edgar-Rincon/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_in_context.xdc] for cell 'phy_inst'
-Finished Parsing XDC File [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-62627-Edgar-Rincon/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_in_context.xdc] for cell 'phy_inst'
+Parsing XDC File [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-7485-Edgar-Rincon/daphne2_daq_txonly/daphne2_daq_txonly/daphne2_daq_txonly_in_context.xdc] for cell 'core_inst/daq_quad_inst'
+Finished Parsing XDC File [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-7485-Edgar-Rincon/daphne2_daq_txonly/daphne2_daq_txonly/daphne2_daq_txonly_in_context.xdc] for cell 'core_inst/daq_quad_inst'
+Parsing XDC File [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-7485-Edgar-Rincon/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_in_context.xdc] for cell 'phy_inst'
+Finished Parsing XDC File [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/.Xil/Vivado-7485-Edgar-Rincon/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_in_context.xdc] for cell 'phy_inst'
 Parsing XDC File [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/xilinx/constraints.xdc]
 INFO: [Timing 38-2] Deriving generated clocks [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/xilinx/constraints.xdc:18]
 WARNING: [Vivado 12-508] No pins matched 'phy_inst/U0/core_clocking_i/mmcm_adv_inst/CLKOUT0'. [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/xilinx/constraints.xdc:27]
@@ -1915,27 +1889,27 @@ Parsing XDC File [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.
 Finished Parsing XDC File [/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2417.668 ; gain = 0.000 ; free physical = 17216 ; free virtual = 24881
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2425.695 ; gain = 0.000 ; free physical = 20818 ; free virtual = 26756
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IBUFGDS => IBUFDS: 1 instance 
   MMCME2_BASE => MMCME2_ADV: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.3 . Memory (MB): peak = 2417.668 ; gain = 0.000 ; free physical = 17214 ; free virtual = 24879
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2425.695 ; gain = 0.000 ; free physical = 20818 ; free virtual = 26756
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 2417.668 ; gain = 765.145 ; free physical = 17459 ; free virtual = 25123
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1495.801; parent = 1284.034; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3412.859; parent = 2385.656; children = 1027.203
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 2425.695 ; gain = 773.113 ; free physical = 21077 ; free virtual = 27014
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1484.063; parent = 1272.741; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.883; parent = 2393.684; children = 1027.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tfbg676-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 2417.668 ; gain = 765.145 ; free physical = 17459 ; free virtual = 25123
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1495.801; parent = 1284.034; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3412.859; parent = 2385.656; children = 1027.203
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 2425.695 ; gain = 773.113 ; free physical = 21077 ; free virtual = 27014
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1484.063; parent = 1272.741; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.883; parent = 2393.684; children = 1027.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1943,9 +1917,9 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property KEEP_HIERARCHY = SOFT for core_inst/daq_quad_inst. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for phy_inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 2417.668 ; gain = 765.145 ; free physical = 17459 ; free virtual = 25123
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1495.801; parent = 1284.034; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3412.859; parent = 2385.656; children = 1027.203
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 2425.695 ; gain = 773.113 ; free physical = 21077 ; free virtual = 27014
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1484.063; parent = 1272.741; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.883; parent = 2393.684; children = 1027.199
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'pdts_ep_startup'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'pdts_rx'
@@ -2444,9 +2418,9 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'dstr4__parameterized5'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:30 . Memory (MB): peak = 2417.668 ; gain = 765.145 ; free physical = 17440 ; free virtual = 25109
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1495.801; parent = 1284.034; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3412.859; parent = 2385.656; children = 1027.203
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:31 . Memory (MB): peak = 2425.695 ; gain = 773.113 ; free physical = 21030 ; free virtual = 26973
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1491.616; parent = 1280.913; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.883; parent = 2393.684; children = 1027.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -2456,7 +2430,6 @@ Detailed RTL Component Info :
 	   2 Input   64 Bit       Adders := 2     
 	   2 Input   17 Bit       Adders := 2     
 	   2 Input   16 Bit       Adders := 7     
-	   2 Input   14 Bit       Adders := 40    
 	   2 Input   12 Bit       Adders := 51    
 	   2 Input   11 Bit       Adders := 8     
 	   2 Input    8 Bit       Adders := 24    
@@ -2635,13 +2608,14 @@ DSP Report: Generating DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0, op
 DSP Report: register gen_self_trigger[0].self_trigger_inst/r_multdata_11_reg is absorbed into DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[0].self_trigger_inst/r_multdata_110 is absorbed into DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[0].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A''*(B:0x3ffc2))'.
-DSP Report: register gen_self_trigger[0].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0.
+DSP Report: Generating DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A2*(B:0x3ffc2))'.
 DSP Report: register gen_self_trigger[0].self_trigger_inst/r_data_10_reg is absorbed into DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[0].self_trigger_inst/r_multdata_10_reg is absorbed into DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[0].self_trigger_inst/r_multdata_100 is absorbed into DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[0].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(ACIN*(B:0x3ffbb))'.
+DSP Report: Generating DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A*(B:0x3ffbb))'.
+DSP Report: register gen_self_trigger[0].self_trigger_inst/r_data_8_reg is absorbed into DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0.
+DSP Report: register gen_self_trigger[0].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[0].self_trigger_inst/r_multdata_9_reg is absorbed into DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[0].self_trigger_inst/r_multdata_90 is absorbed into DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[0].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[0].self_trigger_inst/r_sumamult0.
@@ -2711,13 +2685,14 @@ DSP Report: Generating DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0, op
 DSP Report: register gen_self_trigger[1].self_trigger_inst/r_multdata_11_reg is absorbed into DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[1].self_trigger_inst/r_multdata_110 is absorbed into DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[1].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A''*(B:0x3ffc2))'.
-DSP Report: register gen_self_trigger[1].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0.
+DSP Report: Generating DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A2*(B:0x3ffc2))'.
 DSP Report: register gen_self_trigger[1].self_trigger_inst/r_data_10_reg is absorbed into DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[1].self_trigger_inst/r_multdata_10_reg is absorbed into DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[1].self_trigger_inst/r_multdata_100 is absorbed into DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[1].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(ACIN*(B:0x3ffbb))'.
+DSP Report: Generating DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A*(B:0x3ffbb))'.
+DSP Report: register gen_self_trigger[1].self_trigger_inst/r_data_8_reg is absorbed into DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0.
+DSP Report: register gen_self_trigger[1].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[1].self_trigger_inst/r_multdata_9_reg is absorbed into DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[1].self_trigger_inst/r_multdata_90 is absorbed into DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[1].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[1].self_trigger_inst/r_sumamult0.
@@ -2787,13 +2762,14 @@ DSP Report: Generating DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0, op
 DSP Report: register gen_self_trigger[2].self_trigger_inst/r_multdata_11_reg is absorbed into DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[2].self_trigger_inst/r_multdata_110 is absorbed into DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[2].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A''*(B:0x3ffc2))'.
-DSP Report: register gen_self_trigger[2].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0.
+DSP Report: Generating DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A2*(B:0x3ffc2))'.
 DSP Report: register gen_self_trigger[2].self_trigger_inst/r_data_10_reg is absorbed into DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[2].self_trigger_inst/r_multdata_10_reg is absorbed into DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[2].self_trigger_inst/r_multdata_100 is absorbed into DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[2].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(ACIN*(B:0x3ffbb))'.
+DSP Report: Generating DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A*(B:0x3ffbb))'.
+DSP Report: register gen_self_trigger[2].self_trigger_inst/r_data_8_reg is absorbed into DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0.
+DSP Report: register gen_self_trigger[2].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[2].self_trigger_inst/r_multdata_9_reg is absorbed into DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[2].self_trigger_inst/r_multdata_90 is absorbed into DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[2].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[2].self_trigger_inst/r_sumamult0.
@@ -2863,13 +2839,14 @@ DSP Report: Generating DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0, op
 DSP Report: register gen_self_trigger[3].self_trigger_inst/r_multdata_11_reg is absorbed into DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[3].self_trigger_inst/r_multdata_110 is absorbed into DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[3].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A''*(B:0x3ffc2))'.
-DSP Report: register gen_self_trigger[3].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0.
+DSP Report: Generating DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A2*(B:0x3ffc2))'.
 DSP Report: register gen_self_trigger[3].self_trigger_inst/r_data_10_reg is absorbed into DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[3].self_trigger_inst/r_multdata_10_reg is absorbed into DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[3].self_trigger_inst/r_multdata_100 is absorbed into DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[3].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(ACIN*(B:0x3ffbb))'.
+DSP Report: Generating DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A*(B:0x3ffbb))'.
+DSP Report: register gen_self_trigger[3].self_trigger_inst/r_data_8_reg is absorbed into DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0.
+DSP Report: register gen_self_trigger[3].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[3].self_trigger_inst/r_multdata_9_reg is absorbed into DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[3].self_trigger_inst/r_multdata_90 is absorbed into DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[3].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[3].self_trigger_inst/r_sumamult0.
@@ -2939,13 +2916,14 @@ DSP Report: Generating DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0, op
 DSP Report: register gen_self_trigger[4].self_trigger_inst/r_multdata_11_reg is absorbed into DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[4].self_trigger_inst/r_multdata_110 is absorbed into DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[4].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A''*(B:0x3ffc2))'.
-DSP Report: register gen_self_trigger[4].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0.
+DSP Report: Generating DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A2*(B:0x3ffc2))'.
 DSP Report: register gen_self_trigger[4].self_trigger_inst/r_data_10_reg is absorbed into DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[4].self_trigger_inst/r_multdata_10_reg is absorbed into DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[4].self_trigger_inst/r_multdata_100 is absorbed into DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[4].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(ACIN*(B:0x3ffbb))'.
+DSP Report: Generating DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A*(B:0x3ffbb))'.
+DSP Report: register gen_self_trigger[4].self_trigger_inst/r_data_8_reg is absorbed into DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0.
+DSP Report: register gen_self_trigger[4].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[4].self_trigger_inst/r_multdata_9_reg is absorbed into DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[4].self_trigger_inst/r_multdata_90 is absorbed into DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[4].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[4].self_trigger_inst/r_sumamult0.
@@ -3015,13 +2993,14 @@ DSP Report: Generating DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0, op
 DSP Report: register gen_self_trigger[5].self_trigger_inst/r_multdata_11_reg is absorbed into DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[5].self_trigger_inst/r_multdata_110 is absorbed into DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[5].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A''*(B:0x3ffc2))'.
-DSP Report: register gen_self_trigger[5].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0.
+DSP Report: Generating DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A2*(B:0x3ffc2))'.
 DSP Report: register gen_self_trigger[5].self_trigger_inst/r_data_10_reg is absorbed into DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[5].self_trigger_inst/r_multdata_10_reg is absorbed into DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[5].self_trigger_inst/r_multdata_100 is absorbed into DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[5].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(ACIN*(B:0x3ffbb))'.
+DSP Report: Generating DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A*(B:0x3ffbb))'.
+DSP Report: register gen_self_trigger[5].self_trigger_inst/r_data_8_reg is absorbed into DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0.
+DSP Report: register gen_self_trigger[5].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[5].self_trigger_inst/r_multdata_9_reg is absorbed into DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[5].self_trigger_inst/r_multdata_90 is absorbed into DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[5].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[5].self_trigger_inst/r_sumamult0.
@@ -3091,13 +3070,14 @@ DSP Report: Generating DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0, op
 DSP Report: register gen_self_trigger[6].self_trigger_inst/r_multdata_11_reg is absorbed into DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[6].self_trigger_inst/r_multdata_110 is absorbed into DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[6].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A''*(B:0x3ffc2))'.
-DSP Report: register gen_self_trigger[6].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0.
+DSP Report: Generating DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A2*(B:0x3ffc2))'.
 DSP Report: register gen_self_trigger[6].self_trigger_inst/r_data_10_reg is absorbed into DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[6].self_trigger_inst/r_multdata_10_reg is absorbed into DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[6].self_trigger_inst/r_multdata_100 is absorbed into DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[6].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(ACIN*(B:0x3ffbb))'.
+DSP Report: Generating DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A*(B:0x3ffbb))'.
+DSP Report: register gen_self_trigger[6].self_trigger_inst/r_data_8_reg is absorbed into DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0.
+DSP Report: register gen_self_trigger[6].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[6].self_trigger_inst/r_multdata_9_reg is absorbed into DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[6].self_trigger_inst/r_multdata_90 is absorbed into DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[6].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[6].self_trigger_inst/r_sumamult0.
@@ -3167,13 +3147,14 @@ DSP Report: Generating DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0, op
 DSP Report: register gen_self_trigger[7].self_trigger_inst/r_multdata_11_reg is absorbed into DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[7].self_trigger_inst/r_multdata_110 is absorbed into DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[7].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A''*(B:0x3ffc2))'.
-DSP Report: register gen_self_trigger[7].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0.
+DSP Report: Generating DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A2*(B:0x3ffc2))'.
 DSP Report: register gen_self_trigger[7].self_trigger_inst/r_data_10_reg is absorbed into DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[7].self_trigger_inst/r_multdata_10_reg is absorbed into DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[7].self_trigger_inst/r_multdata_100 is absorbed into DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[7].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0.
-DSP Report: Generating DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(ACIN*(B:0x3ffbb))'.
+DSP Report: Generating DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0, operation Mode is: PCIN+(A*(B:0x3ffbb))'.
+DSP Report: register gen_self_trigger[7].self_trigger_inst/r_data_8_reg is absorbed into DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0.
+DSP Report: register gen_self_trigger[7].self_trigger_inst/r_data_9_reg is absorbed into DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0.
 DSP Report: register gen_self_trigger[7].self_trigger_inst/r_multdata_9_reg is absorbed into DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[7].self_trigger_inst/r_multdata_90 is absorbed into DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0.
 DSP Report: operator gen_self_trigger[7].self_trigger_inst/r_sumamult0 is absorbed into DSP gen_self_trigger[7].self_trigger_inst/r_sumamult0.
@@ -3224,9 +3205,9 @@ WARNING: [Synth 8-3917] design DAPHNE2 has port daq3_sfp_tx_dis driven by consta
 WARNING: [Synth 8-3917] design DAPHNE2 has port gbe_sfp_tx_dis driven by constant 0
 WARNING: [Synth 8-3917] design DAPHNE2 has port cdr_sfp_tx_dis driven by constant 1
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:04 . Memory (MB): peak = 2454.668 ; gain = 802.145 ; free physical = 17316 ; free virtual = 25026
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1603.135; parent = 1391.557; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3481.875; parent = 2454.672; children = 1027.203
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 2456.695 ; gain = 804.113 ; free physical = 20920 ; free virtual = 26904
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1616.147; parent = 1405.535; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3483.898; parent = 2456.699; children = 1027.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -3241,8 +3222,8 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffe0))'  | 14     | 6      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffd4))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffca))' | 14     | 7      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger | PCIN+(A''*(B:0x3ffc2))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger     | PCIN+(ACIN*(B:0x3ffbb))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A2*(B:0x3ffc2))'   | 14     | 7      | -      | -      | 28     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A*(B:0x3ffbb))'    | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb7))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffb4))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb2))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3256,8 +3237,8 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffe0))'  | 14     | 6      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffd4))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffca))' | 14     | 7      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger | PCIN+(A''*(B:0x3ffc2))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger     | PCIN+(ACIN*(B:0x3ffbb))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A2*(B:0x3ffc2))'   | 14     | 7      | -      | -      | 28     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A*(B:0x3ffbb))'    | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb7))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffb4))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb2))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3271,8 +3252,8 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffe0))'  | 14     | 6      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffd4))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffca))' | 14     | 7      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger | PCIN+(A''*(B:0x3ffc2))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger     | PCIN+(ACIN*(B:0x3ffbb))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A2*(B:0x3ffc2))'   | 14     | 7      | -      | -      | 28     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A*(B:0x3ffbb))'    | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb7))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffb4))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb2))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3286,8 +3267,8 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffe0))'  | 14     | 6      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffd4))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffca))' | 14     | 7      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger | PCIN+(A''*(B:0x3ffc2))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger     | PCIN+(ACIN*(B:0x3ffbb))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A2*(B:0x3ffc2))'   | 14     | 7      | -      | -      | 28     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A*(B:0x3ffbb))'    | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb7))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffb4))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb2))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3301,8 +3282,8 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffe0))'  | 14     | 6      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffd4))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffca))' | 14     | 7      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger | PCIN+(A''*(B:0x3ffc2))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger     | PCIN+(ACIN*(B:0x3ffbb))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A2*(B:0x3ffc2))'   | 14     | 7      | -      | -      | 28     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A*(B:0x3ffbb))'    | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb7))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffb4))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb2))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3316,8 +3297,8 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffe0))'  | 14     | 6      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffd4))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffca))' | 14     | 7      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger | PCIN+(A''*(B:0x3ffc2))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger     | PCIN+(ACIN*(B:0x3ffbb))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A2*(B:0x3ffc2))'   | 14     | 7      | -      | -      | 28     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A*(B:0x3ffbb))'    | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb7))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffb4))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb2))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3331,8 +3312,8 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffe0))'  | 14     | 6      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffd4))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffca))' | 14     | 7      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger | PCIN+(A''*(B:0x3ffc2))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger     | PCIN+(ACIN*(B:0x3ffbb))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A2*(B:0x3ffc2))'   | 14     | 7      | -      | -      | 28     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A*(B:0x3ffbb))'    | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb7))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffb4))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb2))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3346,8 +3327,8 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffe0))'  | 14     | 6      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffd4))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffca))' | 14     | 7      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger | PCIN+(A''*(B:0x3ffc2))'  | 14     | 7      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger     | PCIN+(ACIN*(B:0x3ffbb))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A2*(B:0x3ffc2))'   | 14     | 7      | -      | -      | 28     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger | PCIN+(A*(B:0x3ffbb))'    | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb7))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger     | PCIN+(ACIN*(B:0x3ffb4))' | 14     | 8      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger | PCIN+(A''*(B:0x3ffb2))'  | 14     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3366,25 +3347,25 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 2454.668 ; gain = 802.145 ; free physical = 17169 ; free virtual = 24876
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1716.305; parent = 1504.730; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3481.875; parent = 2454.672; children = 1027.203
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:13 ; elapsed = 00:01:13 . Memory (MB): peak = 2456.695 ; gain = 804.113 ; free physical = 20753 ; free virtual = 26744
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1728.401; parent = 1517.789; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3483.898; parent = 2456.699; children = 1027.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:21 . Memory (MB): peak = 2454.668 ; gain = 802.145 ; free physical = 17113 ; free virtual = 24820
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1780.984; parent = 1569.413; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3481.875; parent = 2454.672; children = 1027.203
+Finished Timing Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:23 . Memory (MB): peak = 2456.695 ; gain = 804.113 ; free physical = 20696 ; free virtual = 26687
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1816.706; parent = 1606.094; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3483.898; parent = 2456.699; children = 1027.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:47 ; elapsed = 00:01:48 . Memory (MB): peak = 2503.199 ; gain = 850.676 ; free physical = 17050 ; free virtual = 24757
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1913.729; parent = 1702.157; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3530.406; parent = 2503.203; children = 1027.203
+Finished Technology Mapping : Time (s): cpu = 00:01:52 ; elapsed = 00:01:52 . Memory (MB): peak = 2527.586 ; gain = 875.004 ; free physical = 20281 ; free virtual = 26357
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1948.806; parent = 1738.201; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3554.789; parent = 2527.590; children = 1027.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -3402,49 +3383,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:52 ; elapsed = 00:01:53 . Memory (MB): peak = 2551.027 ; gain = 898.504 ; free physical = 17049 ; free virtual = 24756
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1913.729; parent = 1702.157; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3578.234; parent = 2551.031; children = 1027.203
+Finished IO Insertion : Time (s): cpu = 00:01:58 ; elapsed = 00:01:58 . Memory (MB): peak = 2579.289 ; gain = 926.707 ; free physical = 19864 ; free virtual = 25953
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1948.806; parent = 1738.201; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.492; parent = 2579.293; children = 1027.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:52 ; elapsed = 00:01:53 . Memory (MB): peak = 2551.027 ; gain = 898.504 ; free physical = 17049 ; free virtual = 24756
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1913.729; parent = 1702.157; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3578.234; parent = 2551.031; children = 1027.203
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:58 ; elapsed = 00:01:58 . Memory (MB): peak = 2579.289 ; gain = 926.707 ; free physical = 19849 ; free virtual = 25938
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1948.806; parent = 1738.201; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.492; parent = 2579.293; children = 1027.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:05 ; elapsed = 00:02:06 . Memory (MB): peak = 2551.027 ; gain = 898.504 ; free physical = 16981 ; free virtual = 24688
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1913.729; parent = 1702.157; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3578.234; parent = 2551.031; children = 1027.203
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:12 ; elapsed = 00:02:12 . Memory (MB): peak = 2579.289 ; gain = 926.707 ; free physical = 20111 ; free virtual = 26201
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1948.806; parent = 1738.201; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.492; parent = 2579.293; children = 1027.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:05 ; elapsed = 00:02:06 . Memory (MB): peak = 2551.027 ; gain = 898.504 ; free physical = 16981 ; free virtual = 24688
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1913.729; parent = 1702.157; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3578.234; parent = 2551.031; children = 1027.203
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:12 ; elapsed = 00:02:13 . Memory (MB): peak = 2579.289 ; gain = 926.707 ; free physical = 20096 ; free virtual = 26187
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1948.806; parent = 1738.201; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.492; parent = 2579.293; children = 1027.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:06 ; elapsed = 00:02:07 . Memory (MB): peak = 2551.027 ; gain = 898.504 ; free physical = 16981 ; free virtual = 24689
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1913.729; parent = 1702.157; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3578.234; parent = 2551.031; children = 1027.203
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:13 ; elapsed = 00:02:13 . Memory (MB): peak = 2579.289 ; gain = 926.707 ; free physical = 20113 ; free virtual = 26204
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1948.806; parent = 1738.201; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.492; parent = 2579.293; children = 1027.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:06 ; elapsed = 00:02:07 . Memory (MB): peak = 2551.027 ; gain = 898.504 ; free physical = 16981 ; free virtual = 24689
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1913.729; parent = 1702.157; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3578.234; parent = 2551.031; children = 1027.203
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:13 ; elapsed = 00:02:13 . Memory (MB): peak = 2579.289 ; gain = 926.707 ; free physical = 20105 ; free virtual = 26197
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1948.806; parent = 1738.201; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.492; parent = 2579.293; children = 1027.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -3455,8 +3436,8 @@ Static Shift Register Report:
 |Module Name | RTL Name                                                                                           | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
 +------------+----------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 |DAPHNE2     | endpoint_inst/pdts_endpoint_inst/ep/startup/adel/s_reg[4][0]                                       | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|DAPHNE2     | fe_inst/gen_self_trigger[4].self_trigger_inst/gen_self_trigger[7].self_trigger_inst/o_data_reg[13] | 52     | 560   | NO           | NO                 | YES               | 0      | 1120    | 
 |DAPHNE2     | eth_int_inst/ec_wrapper/ethernet_controller/ICMPPingShiftRegBlock/shReg_reg[43][7]                 | 44     | 8     | NO           | NO                 | YES               | 0      | 16      | 
+|DAPHNE2     | fe_inst/gen_self_trigger[4].self_trigger_inst/gen_self_trigger[7].self_trigger_inst/o_data_reg[13] | 50     | 560   | YES          | NO                 | YES               | 0      | 1120    | 
 +------------+----------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
@@ -3470,29 +3451,29 @@ DSP Final Report (the ' indicates corresponding REG is set)
 +------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name                   | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|dsp_slice__parameterized1_405 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_406                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_403 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_404                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_401 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_402                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_399 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_400                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_397 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_398                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_395 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_396                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_393 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_394                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_391 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_392                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_405 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_406                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_403 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_404                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_401 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_402                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_399 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_400                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_397 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_398                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_395 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_396                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_393 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_394                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_391 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_392                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
 |AFE_self_trigger              | (A''*B)'       | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
 |AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3506,8 +3487,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3521,8 +3502,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3536,8 +3517,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3551,8 +3532,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3566,8 +3547,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3581,8 +3562,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3596,8 +3577,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3606,44 +3587,29 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | (PCIN+(A*B)')' | 0      | 18     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 1    | 
-|dsp_slice__parameterized1_373 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_374                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_371 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_372                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_369 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_370                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_367 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_368                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_365 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_366                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_363 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_364                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_361 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_362                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_359 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_360                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_373 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_374                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_371 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_372                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_369 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_370                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_367 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_368                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_365 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_366                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_363 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_364                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_361 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_362                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_359 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_360                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
 |AFE_self_trigger              | (A''*B)'       | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
 |AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 0      | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | (PCIN+(A*B)')' | 0      | 18     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 1    | 
-|AFE_self_trigger              | (A''*B)'       | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
 |AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3657,8 +3623,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3672,8 +3638,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3687,8 +3653,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3702,8 +3668,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3717,8 +3683,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3732,39 +3698,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 0      | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | (PCIN+(A*B)')' | 0      | 18     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 1    | 
-|dsp_slice__parameterized1_341 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_342                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_339 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_340                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_337 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_338                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_335 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_336                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_333 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_334                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_331 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_332                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_329 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_330                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_327 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_328                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|AFE_self_trigger              | (A''*B)'       | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
 |AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3778,8 +3713,39 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | PCIN+(A*B)'    | 0      | 0      | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | (PCIN+(A*B)')' | 0      | 18     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_slice__parameterized1_341 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_342                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_339 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_340                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_337 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_338                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_335 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_336                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_333 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_334                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_331 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_332                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_329 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_330                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_327 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_328                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|AFE_self_trigger              | (A''*B)'       | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3793,8 +3759,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3808,8 +3774,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3823,8 +3789,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3838,8 +3804,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3853,8 +3819,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3868,39 +3834,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 0      | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | (PCIN+(A*B)')' | 0      | 18     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 1    | 
-|dsp_slice__parameterized1_309 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_310                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_307 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_308                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_305 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_306                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_303 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_304                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_301 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_302                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_299 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_300                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_297 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_298                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_295 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_296                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|AFE_self_trigger              | (A''*B)'       | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
 |AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3914,8 +3849,39 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | PCIN+(A*B)'    | 0      | 0      | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | (PCIN+(A*B)')' | 0      | 18     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_slice__parameterized1_309 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_310                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_307 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_308                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_305 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_306                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_303 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_304                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_301 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_302                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_299 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_300                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_297 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_298                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_295 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_296                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|AFE_self_trigger              | (A''*B)'       | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3929,8 +3895,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3944,8 +3910,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3959,8 +3925,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3974,8 +3940,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -3989,8 +3955,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -4004,39 +3970,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 0      | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | (PCIN+(A*B)')' | 0      | 18     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 1    | 
-|dsp_slice__parameterized1_277 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_278                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_275 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_276                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_273 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_274                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_271 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_272                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_269 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_270                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_267 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_268                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1_265 | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice_266                 | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|dsp_slice__parameterized1     | A*B            | 30     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|dsp_slice                     | C'+D-A'*B      | 14     | 15     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|AFE_self_trigger              | (A''*B)'       | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
 |AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -4050,8 +3985,39 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | PCIN+(A*B)'    | 0      | 0      | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | (PCIN+(A*B)')' | 0      | 18     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|dsp_slice__parameterized1_277 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_278                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_275 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_276                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_273 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_274                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_271 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_272                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_269 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_270                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_267 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_268                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1_265 | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice_266                 | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|dsp_slice__parameterized1     | A*B            | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp_slice                     | C'+D-A'*B      | 14     | 17     | 48     | 14     | 48     | 1    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|AFE_self_trigger              | (A''*B)'       | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -4065,8 +4031,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -4080,8 +4046,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -4095,8 +4061,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -4110,8 +4076,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -4125,8 +4091,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
-|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -4140,8 +4106,23 @@ DSP Final Report (the ' indicates corresponding REG is set)
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | PCIN+(A*B)'    | 0      | 0      | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | (PCIN+(A*B)')' | 0      | 18     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|AFE_self_trigger              | (A''*B)'       | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A'*B)'   | 30     | 18     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
 |self_trigger                  | PCIN+(A*B)'    | 0      | 18     | -      | -      | 0      | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |AFE_self_trigger              | PCIN+(A''*B)'  | 30     | 18     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
@@ -4168,7 +4149,7 @@ Report Cell Usage:
 |1     |daphne2_daq_txonly   |     1|
 |2     |gig_ethernet_pcs_pma |     1|
 |3     |BUFG                 |    11|
-|4     |CARRY4               |   572|
+|4     |CARRY4               |   452|
 |5     |DSP48E1              |   680|
 |14    |FIFO18E1             |    31|
 |16    |FIFO36E1             |    12|
@@ -4176,8 +4157,8 @@ Report Cell Usage:
 |19    |IDELAYCTRL           |     1|
 |20    |IDELAYE2             |    45|
 |21    |ISERDESE2            |    90|
-|23    |LUT1                 |   334|
-|24    |LUT2                 |  1522|
+|23    |LUT1                 |   215|
+|24    |LUT2                 |  2002|
 |25    |LUT3                 |   598|
 |26    |LUT4                 |   776|
 |27    |LUT5                 |  1055|
@@ -4192,8 +4173,8 @@ Report Cell Usage:
 |36    |SRL16E               |     1|
 |37    |SRLC32E              |  2768|
 |38    |FDPE                 |    64|
-|39    |FDRE                 | 14163|
-|40    |FDSE                 |   190|
+|39    |FDRE                 | 15898|
+|40    |FDSE                 |   194|
 |41    |IBUF                 |    25|
 |42    |IBUFDS               |    47|
 |43    |IBUFGDS              |     1|
@@ -4202,31 +4183,31 @@ Report Cell Usage:
 |46    |OBUFT                |    10|
 +------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:06 ; elapsed = 00:02:07 . Memory (MB): peak = 2551.027 ; gain = 898.504 ; free physical = 16981 ; free virtual = 24689
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1913.729; parent = 1702.157; children = 212.116
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3578.234; parent = 2551.031; children = 1027.203
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:13 ; elapsed = 00:02:13 . Memory (MB): peak = 2579.289 ; gain = 926.707 ; free physical = 20052 ; free virtual = 26147
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1948.806; parent = 1738.201; children = 211.527
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.492; parent = 2579.293; children = 1027.199
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:54 ; elapsed = 00:01:58 . Memory (MB): peak = 2551.027 ; gain = 689.879 ; free physical = 17042 ; free virtual = 24749
-Synthesis Optimization Complete : Time (s): cpu = 00:02:06 ; elapsed = 00:02:07 . Memory (MB): peak = 2551.035 ; gain = 898.504 ; free physical = 17042 ; free virtual = 24749
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:00 ; elapsed = 00:02:05 . Memory (MB): peak = 2579.289 ; gain = 708.145 ; free physical = 20096 ; free virtual = 26192
+Synthesis Optimization Complete : Time (s): cpu = 00:02:13 ; elapsed = 00:02:14 . Memory (MB): peak = 2579.297 ; gain = 926.707 ; free physical = 20091 ; free virtual = 26187
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.4 . Memory (MB): peak = 2551.035 ; gain = 0.000 ; free physical = 17136 ; free virtual = 24844
-INFO: [Netlist 29-17] Analyzing 1968 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.46 . Memory (MB): peak = 2579.297 ; gain = 0.000 ; free physical = 19673 ; free virtual = 25922
+INFO: [Netlist 29-17] Analyzing 1848 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 90 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2575.039 ; gain = 0.000 ; free physical = 17055 ; free virtual = 24762
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2603.301 ; gain = 0.000 ; free physical = 19624 ; free virtual = 25988
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IBUFGDS => IBUFDS: 1 instance 
   MMCME2_BASE => MMCME2_ADV: 1 instance 
 
-Synth Design complete, checksum: eaa79f73
+Synth Design complete, checksum: de3ff023
 INFO: [Common 17-83] Releasing license: Synthesis
 429 Infos, 137 Warnings, 4 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:18 ; elapsed = 00:02:17 . Memory (MB): peak = 2575.039 ; gain = 1285.266 ; free physical = 17449 ; free virtual = 25156
+synth_design: Time (s): cpu = 00:02:27 ; elapsed = 00:02:25 . Memory (MB): peak = 2603.301 ; gain = 1313.531 ; free physical = 20048 ; free virtual = 26412
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint '/home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/DAPHNE2.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file DAPHNE2_utilization_synth.rpt -pb DAPHNE2_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jun  9 10:54:30 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 16 11:44:48 2023...

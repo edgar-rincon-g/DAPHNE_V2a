@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Fri Jun  9 10:54:30 2023
+| Date         : Fri Jun 16 11:44:48 2023
 | Host         : Edgar-Rincon running 64-bit Ubuntu 21.04
 | Command      : report_utilization -file DAPHNE2_utilization_synth.rpt -pb DAPHNE2_utilization_synth.pb
 | Design       : DAPHNE2
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+-------+-------+------------+-----------+-------+
 |          Site Type         |  Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+-------+-------+------------+-----------+-------+
-| Slice LUTs*                |  8221 |     0 |          0 |    134600 |  6.11 |
-|   LUT as Logic             |  5452 |     0 |          0 |    134600 |  4.05 |
+| Slice LUTs*                |  8382 |     0 |          0 |    134600 |  6.23 |
+|   LUT as Logic             |  5613 |     0 |          0 |    134600 |  4.17 |
 |   LUT as Memory            |  2769 |     0 |          0 |     46200 |  5.99 |
 |     LUT as Distributed RAM |     0 |     0 |            |           |       |
 |     LUT as Shift Register  |  2769 |     0 |            |           |       |
-| Slice Registers            | 14417 |     0 |          0 |    269200 |  5.36 |
-|   Register as Flip Flop    | 14417 |     0 |          0 |    269200 |  5.36 |
+| Slice Registers            | 16156 |     0 |          0 |    269200 |  6.00 |
+|   Register as Flip Flop    | 16156 |     0 |          0 |    269200 |  6.00 |
 |   Register as Latch        |     0 |     0 |          0 |    269200 |  0.00 |
 | F7 Muxes                   |   233 |     0 |          0 |     67300 |  0.35 |
 | F8 Muxes                   |    45 |     0 |          0 |     33650 |  0.13 |
@@ -60,8 +60,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |          Yes |           - |            - |
 | 64    |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 190   |          Yes |         Set |            - |
-| 14163 |          Yes |       Reset |            - |
+| 194   |          Yes |         Set |            - |
+| 15898 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -162,19 +162,19 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------+-------+---------------------+
 |  Ref Name  |  Used | Functional Category |
 +------------+-------+---------------------+
-| FDRE       | 14163 |        Flop & Latch |
+| FDRE       | 15898 |        Flop & Latch |
 | SRLC32E    |  2768 |  Distributed Memory |
 | LUT6       |  2285 |                 LUT |
-| LUT2       |  1522 |                 LUT |
+| LUT2       |  2002 |                 LUT |
 | LUT5       |  1055 |                 LUT |
 | LUT4       |   776 |                 LUT |
 | DSP48E1    |   680 |    Block Arithmetic |
 | LUT3       |   598 |                 LUT |
-| CARRY4     |   572 |          CarryLogic |
-| LUT1       |   333 |                 LUT |
+| CARRY4     |   452 |          CarryLogic |
 | MUXF7      |   233 |               MuxFx |
+| LUT1       |   214 |                 LUT |
 | RAMB18E1   |   204 |        Block Memory |
-| FDSE       |   190 |        Flop & Latch |
+| FDSE       |   194 |        Flop & Latch |
 | ISERDESE2  |    90 |                  IO |
 | FDPE       |    64 |        Flop & Latch |
 | IBUFDS     |    48 |                  IO |

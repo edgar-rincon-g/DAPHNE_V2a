@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Jun  9 10:52:04 2023
-# Process ID: 62627
+# Start of session at: Fri Jun 16 11:42:13 2023
+# Process ID: 7485
 # Current directory: /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1
 # Command line: vivado -log DAPHNE2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DAPHNE2.tcl
 # Log file: /home/edgar/Documentos/DUNE/Self_trigger/DAPHNE_V2a/project_1.runs/synth_1/DAPHNE2.vds
